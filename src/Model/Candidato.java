@@ -3,7 +3,7 @@ package Model;
 
 public class Candidato extends Usuario {
     
-    private int IDcandidato;
+    private int ID_candidato;
     private String CPF;
     private String RG;
     private int idade;
@@ -11,27 +11,27 @@ public class Candidato extends Usuario {
     public Candidato() {
     }
 
-    public Candidato(int IDcandidato, String CPF, String RG, int idade) {
-        this.IDcandidato = IDcandidato;
+    public Candidato(int ID_candidato, String CPF, String RG, int idade) {
+        this.ID_candidato = ID_candidato;
         this.CPF = CPF;
         this.RG = RG;
         this.idade = idade;
     }
 
-    public Candidato(int IDcandidato, String CPF, String RG, int idade, String nome) {
+    public Candidato(int ID_candidato, String CPF, String RG, int idade, String nome) {
         super(nome);
-        this.IDcandidato = IDcandidato;
+        this.ID_candidato = ID_candidato;
         this.CPF = CPF;
         this.RG = RG;
         this.idade = idade;
     }
 
-    public int getIDcandidato() {
-        return IDcandidato;
+    public int getID_candidato() {
+        return ID_candidato;
     }
 
-    public void setIDcandidato(int IDcandidato) {
-        this.IDcandidato = IDcandidato;
+    public void setID_candidato(int ID_candidato) {
+        this.ID_candidato = ID_candidato;
     }
 
     public String getCPF() {
@@ -59,23 +59,14 @@ public class Candidato extends Usuario {
     }
 
     @Override
-    public boolean login() {
-        return super.login(); 
-    }
-
-    @Override
     public boolean cadastro() {
         return super.cadastro(); 
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
+    @Override
+    public boolean gerenciar(){
+        return super.gerenciar();
+    }
     
     
 }
