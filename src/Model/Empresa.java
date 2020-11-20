@@ -3,7 +3,7 @@ package Model;
 
 public class Empresa extends Usuario {
     
-    private int IDempresa;
+    private int ID_empresa;
     private String CNPJ;
     private String CEP;
     private String endereco;
@@ -12,27 +12,27 @@ public class Empresa extends Usuario {
     }
     
   
-    public Empresa(int IDempresa, String CNPJ, String CEP, String endereco) {
-        this.IDempresa = IDempresa;
+    public Empresa(int ID_empresa, String CNPJ, String CEP, String endereco) {
+        this.ID_empresa = ID_empresa;
         this.CNPJ = CNPJ;
         this.CEP = CEP;
         this.endereco = endereco;
     }
 
-    public Empresa(int IDempresa, String CNPJ, String CEP, String endereco, String nome) {
+    public Empresa(int ID_empresa, String CNPJ, String CEP, String endereco, String nome) {
         super(nome);
-        this.IDempresa = IDempresa;
+        this.ID_empresa = ID_empresa;
         this.CNPJ = CNPJ;
         this.CEP = CEP;
         this.endereco = endereco;
     }
 
-    public int getIDempresa() {
-        return IDempresa;
+    public int get_IDempresa() {
+        return ID_empresa;
     }
 
-    public void setIDempresa(int IDempresa) {
-        this.IDempresa = IDempresa;
+    public void setID_empresa(int ID_empresa) {
+        this.ID_empresa = ID_empresa;
     }
 
     public String getCNPJ() {
@@ -60,16 +60,14 @@ public class Empresa extends Usuario {
     }
 
     @Override
-    public boolean login() {
-        return super.login(); 
-    }
-
-    @Override
     public boolean cadastro() {
         return super.cadastro(); 
     }
     
-    
+    @Override
+    public boolean gerenciar() {
+        return super.gerenciar();
+    }
     
     
     
