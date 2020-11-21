@@ -1,7 +1,7 @@
 package Model;
 
 
-public class Candidato extends Usuario {
+public class Candidato {
     
     private int ID_candidato;
     private String CPF;
