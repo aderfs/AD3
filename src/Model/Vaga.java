@@ -1,7 +1,7 @@
 package Model;
 
 
-public class Vaga extends Empresa {
+public class Vaga {
     
     private int ID_Vaga;
     private String descricaovaga;
