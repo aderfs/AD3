@@ -70,6 +70,7 @@ public class Vaga extends Empresa {
     }
     
     public boolean Cadastro_Vaga() {
+        //informar o id da empresa dona da vaga
         return true; //adicionar o codigo o cadastro de uma vaga
     }
     
