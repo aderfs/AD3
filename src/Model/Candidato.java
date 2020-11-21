@@ -7,6 +7,7 @@ public class Candidato extends Usuario {
     private String CPF;
     private String RG;
     private int idade;
+    private String Curriculo; //arrumar todo a classe curriculo nesse coiso
 
     public Candidato() {
     }
