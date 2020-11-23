@@ -1,39 +1,51 @@
 package Model;
+import java.util.*;
+import java.sql.*;
 
 
-public class Cucrriculo {
+public class Curriculo {
     
-    private int ID_Curriculo;
-    private String nome;
+    public static int ID_curriculo;
+    private String Nome;
+    private String Curriculo;
     private String CPF;
     private String RG;
-    private int idade;
-    private String Curriculo; //arrumar todo a classe curriculo nesse coiso
+    private int Idade;
 
-    public Candidato() {
+    public Curriculo() {
     }
 
-    public Candidato(int ID_candidato, String CPF, String RG, int idade) {
-        this.ID_candidato = ID_candidato;
+    public Curriculo(int ID_curriculo, String Nome, String Curriculo, String CPF, String RG, int Idade) {
+        this.ID_curriculo = ID_curriculo;
+        this.Nome = Nome;
+        this.Curriculo = Curriculo;
         this.CPF = CPF;
         this.RG = RG;
-        this.idade = idade;
+        this.Idade = Idade;
     }
 
-    public Candidato(int ID_candidato, String CPF, String RG, int idade, String nome) {
-        super(nome);
-        this.ID_candidato = ID_candidato;
-        this.CPF = CPF;
-        this.RG = RG;
-        this.idade = idade;
+    public int getID_curriculo() {
+        return ID_curriculo;
     }
 
-    public int getID_candidato() {
-        return ID_candidato;
+    public void setID_candidato(int ID_curriculo) {
+        this.ID_curriculo = ID_curriculo;
+    }
+    
+    public String getNome() {
+        return Nome;
+    }
+    
+    public void setNome() {
+        this.Nome = Nome;
     }
 
-    public void setID_candidato(int ID_candidato) {
-        this.ID_candidato = ID_candidato;
+    public String getCurriculo() {
+        return Curriculo;
+    }
+
+    public void setCurriculo(String Curriculo) {
+        this.Curriculo = Curriculo;
     }
 
     public String getCPF() {
@@ -53,22 +65,39 @@ public class Cucrriculo {
     }
 
     public int getIdade() {
-        return idade;
+        return Idade;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setIdade(int Idade) {
+        this.Idade = Idade;
+    }
+    
+    public ArrayList getListacurriculos() {
+        return dao.getListacurriculos();
     }
 
-    @Override
-    public boolean cadastro() {
-        return super.cadastro(); 
+    public boolean InserirCurriculo(Curriculo objeto) {
+        dao.InserirCurriculo(objeto);
+        return true;
     }
-    
-    @Override
-    public boolean gerenciar(){
-        return super.gerenciar();
+
+    public boolean DeletarCurriculo(int ID_curriculo) {
+        dao.DeletarCurriculo(ID_curriculo);
+        return true;
     }
-    
+
+    public boolean AtualizarCurriculo(Curriculo objeto) {
+        dao.AtualizarCurriculo(objeto);
+        return true;
+    }
+
+    public Curriculo dadosCurriculo(int ID_curriculo) {
+        dao.dadosCurriculo(ID_curriculo);
+        return null;
+    }
+
+    public int maiorID_curriculo() throws SQLException {
+        return dao.maiorID_curriculo();
+    }
     
 }
