@@ -72,8 +72,8 @@ public class Vaga {
         return true;
     }
 
-    public boolean DeletarVagas(int ID_vagas) {
-        dao.DeletarVagas(ID_vagas);
+    public boolean DeletarVagas(int ID_vaga) {
+        dao.DeletarVagas(ID_vaga);
         return true;
     }
 
@@ -82,13 +82,13 @@ public class Vaga {
         return true;
     }
 
-    public Curriculo dadosVagas(int ID_vagas) {
-        dao.dadosVagas(ID_vagas);
+    public Curriculo DadosVagas(int ID_vaga) {
+        dao.DadosVagas(ID_vaga);
         return null;
     }
 
-    public int maiorID_vagas() throws SQLException {
-        return dao.maiorID_vagas();
+    public int maiorID_vaga() throws SQLException {
+        return dao.maiorID_vaga();
     }
     
     
