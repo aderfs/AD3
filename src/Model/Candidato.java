@@ -1,9 +1,9 @@
 package Model;
 
 
-public class Candidato {
+public class Cucrriculo {
     
-    private int ID_candidato;
+    private int ID_Curriculo;
     private String nome;
     private String CPF;
     private String RG;
