@@ -4,6 +4,7 @@ package Model;
 public class Candidato {
     
     private int ID_candidato;
+    private String nome;
     private String CPF;
     private String RG;
     private int idade;
