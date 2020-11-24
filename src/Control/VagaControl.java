@@ -6,16 +6,18 @@ import java.sql.*;
 
 public class VagaControl {
    
-   private final Vaga control;
+   private final Vaga control; 
+   //atributo para facilitar mudancas no nome do model
    
    public VagaControl() {
        this.control = new Vaga();
+       //contrutor que facilita mudancas na camada model sem afetar tanto o control
    }
    
    //create
    public boolean CastrarVaga(String Descricaovaga, String Prerequisito, String Especificacoes, String Contato) {
       
-      int ID_vaga = control.maiorID_Vaga() + 1;
+      int ID_vaga = control.maiorID_Vaga() + 1; //atribui um novo maior id para o objeto ainda sem id
       Vaga objeto = new Vaga(ID_vaga, DescricaoVaga, Prerequisito, Especificacoes, Contato);
       
       if(control.InserirVagas(objeto)){
