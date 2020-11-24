@@ -7,7 +7,7 @@ import java.util.*;
 
 public class CandidaturaControl {
     
-    private Candidatura candidatura;
+    private final Candidatura candidatura;
 
     public CandidaturaControl(Candidatura candidatura) {
         this.candidatura = new Candidatura();
