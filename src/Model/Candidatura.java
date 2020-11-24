@@ -5,16 +5,16 @@ import java.sql.*;
 public class Candidatura {
     
     private int ID_candidatura;
-    private int Curriculo;
-    private int Vaga;
+    private int Curriculo_ID_curriculo;
+    private int Vaga_ID_vaga;
 
     public Candidatura() {
     }
 
-    public Candidatura(int ID_candidatura, int Curriculo, int Vaga) {
+    public Candidatura(int ID_candidatura, int Curriculo_ID_curriculo, int Vaga_ID_vaga) {
         this.ID_candidatura = ID_candidatura;
-        this.Curriculo = Curriculo;
-        this.Vaga = Vaga;
+        this.Curriculo_ID_curriculo = Curriculo_ID_curriculo;
+        this.Vaga_ID_vaga = Vaga_ID_vaga;
     }
 
     public int getID_candidatura() {
@@ -25,20 +25,20 @@ public class Candidatura {
         this.ID_candidatura = ID_candidatura;
     }
 
-    public int getCurriculo() {
-        return Curriculo;
+    public int getCurriculo_ID_curriculo() {
+        return Curriculo_ID_curriculo;
     }
 
-    public void setCurriculo(int Curriculo) {
-        this.Curriculo = Curriculo;
+    public void setCurriculo_ID_curriculo(int Curriculo_ID_curriculo) {
+        this.Curriculo_ID_curriculo = Curriculo_ID_curriculo;
     }
 
-    public int getVaga() {
-        return Vaga;
+    public int getVaga_ID_vaga() {
+        return Vaga_ID_vaga;
     }
 
-    public void setVaga(int Vaga) {
-        this.Vaga = Vaga;
+    public void setVaga_ID_vaga(int Vaga_ID_vaga) {
+        this.Vaga_ID_vaga = Vaga_ID_vaga;
     }
     
      public ArrayList getListacandidaturas() {
