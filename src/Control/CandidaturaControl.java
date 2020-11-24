@@ -9,7 +9,7 @@ public class CandidaturaControl {
     
     private final Candidatura candidatura;
 
-    public CandidaturaControl(Candidatura candidatura) {
+    public CandidaturaControl() {
         this.candidatura = new Candidatura();
     }
     
