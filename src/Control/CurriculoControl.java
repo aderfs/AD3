@@ -15,7 +15,7 @@ public class CurriculoControl {
     
     public boolean CurriculoControl(String Nome, String Curriculo, String CPF, String RG, int Idade) throws SQLException {
         
-         int id = curriculo.maiorID_curriculo() + 1;
+         int id = 0; //BD tem auto increment
          Curriculo objeto = new Curriculo(id, Nome, Curriculo, CPF, RG, Idade);
          if(curriculo.InserirCurriculo(objeto)) {
              return true;
@@ -35,7 +35,7 @@ public class CurriculoControl {
     }
     
     public Curriculo LoadCurriculo(int id) {
-        curriculo.DadosCurriculo(id);
+        curriculo.dadosCurriculo(id);
         return null;
     }
     
@@ -69,4 +69,3 @@ public class CurriculoControl {
     
 }
     
-
