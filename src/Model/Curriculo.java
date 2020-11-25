@@ -24,7 +24,7 @@ public class Curriculo {
         this.CPF = CPF;
         this.RG = RG;
         this.Idade = Idade;
-        this.dao = new CurriculoDAO();
+        this.DAO = new CurriculoDAO();
     }
 
     public int getID_curriculo() {
