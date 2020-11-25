@@ -87,12 +87,6 @@ public class CadastroCurriculo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(L_RG_Curriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(L_CPF_Curriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(L_Idade_Curriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(L_Nome_Curriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(L_Curriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(T_idade_Curriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(B_Cancelar_Curriculo)
                         .addGap(100, 100, 100)
@@ -100,7 +94,13 @@ public class CadastroCurriculo extends javax.swing.JFrame {
                     .addComponent(T_RG_Curriculo)
                     .addComponent(T_CPF_Curriculo)
                     .addComponent(T_Nome_Curriculo)
-                    .addComponent(T_Curriculo))
+                    .addComponent(T_Curriculo)
+                    .addComponent(T_idade_Curriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(L_Idade_Curriculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(L_CPF_Curriculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(L_RG_Curriculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(L_Curriculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(L_Nome_Curriculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -146,7 +146,7 @@ public class CadastroCurriculo extends javax.swing.JFrame {
     }//GEN-LAST:event_T_idade_CurriculoActionPerformed
 
     private void B_Cancelar_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_CurriculoActionPerformed
-        // TODO add your handling code here:
+         this.setVisible(false);
     }//GEN-LAST:event_B_Cancelar_CurriculoActionPerformed
 
     private void T_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_T_CurriculoActionPerformed

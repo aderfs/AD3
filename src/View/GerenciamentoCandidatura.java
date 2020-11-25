@@ -27,21 +27,139 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        T_Gerenciamento_Candidatura = new javax.swing.JTable();
+        B_Cancelar_Gerenciamento_Candidatura = new javax.swing.JButton();
+        B_Apagar_Gerenciamento_Candidatura = new javax.swing.JButton();
+        B_Alterar_Gerenciamento_Candidatura = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        T_Gerenciamento_Candidatura.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "ID_Curriculo", "ID_Vaga"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(T_Gerenciamento_Candidatura);
+
+        B_Cancelar_Gerenciamento_Candidatura.setText("Cancelar");
+        B_Cancelar_Gerenciamento_Candidatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_Cancelar_Gerenciamento_CandidaturaActionPerformed(evt);
+            }
+        });
+
+        B_Apagar_Gerenciamento_Candidatura.setText("Apagar");
+        B_Apagar_Gerenciamento_Candidatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_Apagar_Gerenciamento_CandidaturaActionPerformed(evt);
+            }
+        });
+
+        B_Alterar_Gerenciamento_Candidatura.setText("Alterar");
+        B_Alterar_Gerenciamento_Candidatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_Alterar_Gerenciamento_CandidaturaActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("ID do curriculo:");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("ID da vaga:");
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(B_Cancelar_Gerenciamento_Candidatura))
+                .addGap(65, 65, 65)
+                .addComponent(B_Apagar_Gerenciamento_Candidatura)
+                .addGap(65, 65, 65)
+                .addComponent(B_Alterar_Gerenciamento_Candidatura)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jLabel1)
+                .addGap(10, 10, 10)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2)
+                .addGap(10, 10, 10)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(B_Apagar_Gerenciamento_Candidatura)
+                    .addComponent(B_Alterar_Gerenciamento_Candidatura)
+                    .addComponent(B_Cancelar_Gerenciamento_Candidatura))
+                .addGap(20, 20, 20))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void B_Cancelar_Gerenciamento_CandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_Gerenciamento_CandidaturaActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_B_Cancelar_Gerenciamento_CandidaturaActionPerformed
+
+    private void B_Apagar_Gerenciamento_CandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_Gerenciamento_CandidaturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B_Apagar_Gerenciamento_CandidaturaActionPerformed
+
+    private void B_Alterar_Gerenciamento_CandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_Gerenciamento_CandidaturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B_Alterar_Gerenciamento_CandidaturaActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +197,14 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton B_Alterar_Gerenciamento_Candidatura;
+    private javax.swing.JButton B_Apagar_Gerenciamento_Candidatura;
+    private javax.swing.JButton B_Cancelar_Gerenciamento_Candidatura;
+    private javax.swing.JTable T_Gerenciamento_Candidatura;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

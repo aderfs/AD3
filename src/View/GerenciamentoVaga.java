@@ -64,7 +64,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(Table_GVaga);
 
-        jLabel1.setText("Descrição da vaga: ");
+        jLabel1.setText("Descrição da vaga:");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,14 +123,14 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(200, 200, 200)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField2)
                             .addComponent(jTextField3)
                             .addComponent(jTextField1)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(135, 135, 135)
                         .addComponent(B_Cancelar_GVaga)
@@ -138,37 +138,38 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
                         .addComponent(B_Apagar_GVaga)
                         .addGap(60, 60, 60)
                         .addComponent(B_Alterar_GVaga)))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
+                .addGap(35, 35, 35)
                 .addComponent(jLabel4)
-                .addGap(20, 20, 20)
+                .addGap(10, 10, 10)
                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addGap(20, 20, 20)
+                .addGap(10, 10, 10)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel2)
-                .addGap(20, 20, 20)
+                .addGap(10, 10, 10)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3)
                 .addGap(20, 20, 20)
+                .addComponent(jLabel3)
+                .addGap(10, 10, 10)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B_Apagar_GVaga)
                     .addComponent(B_Alterar_GVaga)
                     .addComponent(B_Cancelar_GVaga))
-                .addGap(21, 21, 21))
+                .addGap(20, 20, 20))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -188,7 +189,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
     }//GEN-LAST:event_B_Alterar_GVagaActionPerformed
 
     private void B_Cancelar_GVagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_GVagaActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_B_Cancelar_GVagaActionPerformed
 
     private void B_Apagar_GVagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GVagaActionPerformed

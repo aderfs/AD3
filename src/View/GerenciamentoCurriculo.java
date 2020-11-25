@@ -28,7 +28,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        Table_GCurriculo = new javax.swing.JTable();
+        T_Gerenciamento_Curriculo = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -39,13 +39,13 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        B_Alterar_GCurriculo = new javax.swing.JButton();
-        B_Cancelar_GCurriculo = new javax.swing.JButton();
-        B_Apagar_GCurriculo = new javax.swing.JButton();
+        B_Alterar_Gerenciamento_Curriculo = new javax.swing.JButton();
+        B_Cancelar_Gerenciamento_Curriculo = new javax.swing.JButton();
+        B_Apagarr_Gerenciamento_Curriculo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Table_GCurriculo.setModel(new javax.swing.table.DefaultTableModel(
+        T_Gerenciamento_Curriculo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -64,7 +64,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(Table_GCurriculo);
+        jScrollPane1.setViewportView(T_Gerenciamento_Curriculo);
 
         jLabel1.setText("Nome:");
 
@@ -100,24 +100,24 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
 
         jLabel5.setText("Curriculo:");
 
-        B_Alterar_GCurriculo.setText("Alterar");
-        B_Alterar_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
+        B_Alterar_Gerenciamento_Curriculo.setText("Alterar");
+        B_Alterar_Gerenciamento_Curriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B_Alterar_GCurriculoActionPerformed(evt);
+                B_Alterar_Gerenciamento_CurriculoActionPerformed(evt);
             }
         });
 
-        B_Cancelar_GCurriculo.setText("Cancelar");
-        B_Cancelar_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
+        B_Cancelar_Gerenciamento_Curriculo.setText("Cancelar");
+        B_Cancelar_Gerenciamento_Curriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B_Cancelar_GCurriculoActionPerformed(evt);
+                B_Cancelar_Gerenciamento_CurriculoActionPerformed(evt);
             }
         });
 
-        B_Apagar_GCurriculo.setText("Apagar");
-        B_Apagar_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
+        B_Apagarr_Gerenciamento_Curriculo.setText("Apagar");
+        B_Apagarr_Gerenciamento_Curriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B_Apagar_GCurriculoActionPerformed(evt);
+                B_Apagarr_Gerenciamento_CurriculoActionPerformed(evt);
             }
         });
 
@@ -125,7 +125,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,48 +136,48 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(B_Cancelar_GCurriculo)
-                        .addGap(62, 62, 62)
-                        .addComponent(B_Apagar_GCurriculo)
+                        .addComponent(B_Cancelar_Gerenciamento_Curriculo)
                         .addGap(65, 65, 65)
-                        .addComponent(B_Alterar_GCurriculo))
+                        .addComponent(B_Apagarr_Gerenciamento_Curriculo)
+                        .addGap(65, 65, 65)
+                        .addComponent(B_Alterar_Gerenciamento_Curriculo))
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(325, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(10, 10, 10)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(10, 10, 10)
                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addGap(10, 10, 10)
                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(B_Apagar_GCurriculo)
-                    .addComponent(B_Alterar_GCurriculo)
-                    .addComponent(B_Cancelar_GCurriculo))
-                .addContainerGap())
+                    .addComponent(B_Apagarr_Gerenciamento_Curriculo)
+                    .addComponent(B_Alterar_Gerenciamento_Curriculo)
+                    .addComponent(B_Cancelar_Gerenciamento_Curriculo))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -200,17 +200,17 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
-    private void B_Alterar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_GCurriculoActionPerformed
+    private void B_Alterar_Gerenciamento_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_Gerenciamento_CurriculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_B_Alterar_GCurriculoActionPerformed
+    }//GEN-LAST:event_B_Alterar_Gerenciamento_CurriculoActionPerformed
 
-    private void B_Cancelar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_GCurriculoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_B_Cancelar_GCurriculoActionPerformed
+    private void B_Cancelar_Gerenciamento_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_Gerenciamento_CurriculoActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_B_Cancelar_Gerenciamento_CurriculoActionPerformed
 
-    private void B_Apagar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GCurriculoActionPerformed
+    private void B_Apagarr_Gerenciamento_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagarr_Gerenciamento_CurriculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_B_Apagar_GCurriculoActionPerformed
+    }//GEN-LAST:event_B_Apagarr_Gerenciamento_CurriculoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,10 +249,10 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton B_Alterar_GCurriculo;
-    private javax.swing.JButton B_Apagar_GCurriculo;
-    private javax.swing.JButton B_Cancelar_GCurriculo;
-    private javax.swing.JTable Table_GCurriculo;
+    private javax.swing.JButton B_Alterar_Gerenciamento_Curriculo;
+    private javax.swing.JButton B_Apagarr_Gerenciamento_Curriculo;
+    private javax.swing.JButton B_Cancelar_Gerenciamento_Curriculo;
+    private javax.swing.JTable T_Gerenciamento_Curriculo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

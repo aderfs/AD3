@@ -63,6 +63,11 @@ public class CadastroVaga extends javax.swing.JFrame {
         B_Cadastrar_Vaga.setText("Cadastrar");
 
         B_Cancelar_Vaga.setText("Cancelar");
+        B_Cancelar_Vaga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_Cancelar_VagaActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Contato:");
 
@@ -120,10 +125,11 @@ public class CadastroVaga extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -133,6 +139,10 @@ public class CadastroVaga extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void B_Cancelar_VagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_VagaActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_B_Cancelar_VagaActionPerformed
 
     /**
      * @param args the command line arguments

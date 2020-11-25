@@ -78,6 +78,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Menu_Vagas.add(MI_CrIar_Vaga);
 
         MI_Gerenciar_Vagas.setText("Gerenciar Vagas");
+        MI_Gerenciar_Vagas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_Gerenciar_VagasActionPerformed(evt);
+            }
+        });
         Menu_Vagas.add(MI_Gerenciar_Vagas);
 
         jMenuBar1.add(Menu_Vagas);
@@ -93,6 +98,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Menu_Candidaturas.add(MI_Criar_Candidatura);
 
         MI_Gerenciar_Candidaturas.setText("Gerenciar Candidaturas");
+        MI_Gerenciar_Candidaturas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_Gerenciar_CandidaturasActionPerformed(evt);
+            }
+        });
         Menu_Candidaturas.add(MI_Gerenciar_Candidaturas);
 
         jMenuBar1.add(Menu_Candidaturas);
@@ -120,7 +130,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_MI_Gerenciar_CurriculosActionPerformed
 
     private void MI_Criar_CandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Criar_CandidaturaActionPerformed
-        // TODO add your handling code here:
+        CadastroCandidatura objeto = new CadastroCandidatura();
+        objeto.setVisible(true);
     }//GEN-LAST:event_MI_Criar_CandidaturaActionPerformed
 
     private void MI_Cadastrar_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Cadastrar_CurriculoActionPerformed
@@ -141,6 +152,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         CadastroVaga objeto = new CadastroVaga();
         objeto.setVisible(true);
     }//GEN-LAST:event_MI_CrIar_VagaActionPerformed
+
+    private void MI_Gerenciar_VagasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Gerenciar_VagasActionPerformed
+        GerenciamentoVaga objeto = new GerenciamentoVaga();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_MI_Gerenciar_VagasActionPerformed
+
+    private void MI_Gerenciar_CandidaturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Gerenciar_CandidaturasActionPerformed
+       GerenciamentoCurriculo objeto = new GerenciamentoCurriculo();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_MI_Gerenciar_CandidaturasActionPerformed
 
     /**
      * @param args the command line arguments
