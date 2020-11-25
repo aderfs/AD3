@@ -11,8 +11,10 @@ public class Curriculo {
     private String CPF;
     private String RG;
     private int Idade;
+    private final CurriculoDAO dao;
 
     public Curriculo() {
+        this.dao = new CurriculoDAO();
     }
 
     public Curriculo(int ID_curriculo, String Nome, String Curriculo, String CPF, String RG, int Idade) {
@@ -22,6 +24,7 @@ public class Curriculo {
         this.CPF = CPF;
         this.RG = RG;
         this.Idade = Idade;
+        this.dao = new CurriculoDAO();
     }
 
     public int getID_curriculo() {
