@@ -11,10 +11,10 @@ public class Curriculo {
     private String CPF;
     private String RG;
     private int Idade;
-    private final CurriculoDAO dao;
+    private final CurriculoDAO DAO;
 
     public Curriculo() {
-        this.dao = new CurriculoDAO();
+        this.DAO = new CurriculoDAO();
     }
 
     public Curriculo(int ID_curriculo, String Nome, String Curriculo, String CPF, String RG, int Idade) {
