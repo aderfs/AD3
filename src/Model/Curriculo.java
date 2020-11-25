@@ -2,7 +2,7 @@ package Model;
 
 import java.util.*;
 import java.sql.*;
-import CurriculoDAO;
+import DAO.CurriculoDAO;
 
 
 public class Curriculo {
