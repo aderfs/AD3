@@ -40,19 +40,19 @@ public class CurriculoControl {
     }
     
      
-    public ArrayList getListacandidaturas() {
+    public ArrayList getListacurriculos() {
         return curriculo.getListacurriculos();
     }
     
     
     @SuppressWarnings("unchecked")
-    public String[][] getMatrizCandidatura() {
+    public String[][] getMatrizCurriculo() {
     
         ArrayList<Curriculo> listacurriculos = curriculo.getListacurriculos();
         int tamanho = listacurriculos.size();
         
         
-        String MatrizCandidatura[][] = new String[tamanho][5];
+        String MatrizCurriculo[][] = new String[tamanho][5];
         for (int i = 0; i < tamanho; i++) {
             MatrizCandidatura[i][0] = listacurriculos.get(i).getID_curriculo() + "";
             MatrizCandidatura[i][1] = listacurriculos.get(i).getCurriculo();
@@ -64,7 +64,7 @@ public class CurriculoControl {
             
         }
         
-        return MatrizCandidatura;
+        return MatrizCurriculo;
     }
     
 }
