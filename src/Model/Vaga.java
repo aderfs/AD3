@@ -11,10 +11,10 @@ public class Vaga {
     private String Prerequisito;
     private String Especificacoes;
     private String Contato;
-    private final VagaDAO dao;
+    private final VagaDAO DAO;
 
     public Vaga() {
-        this.dao = new VagaDAO();
+        this.DAO = new VagaDAO();
     }
 
     public Vaga(int ID_vaga, String Descricaovaga, String Prerequisito, String Especificacoes, String Contato) {
