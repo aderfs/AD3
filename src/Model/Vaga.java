@@ -11,8 +11,10 @@ public class Vaga {
     private String Prerequisito;
     private String Especificacoes;
     private String Contato;
+    private final VagaDAO dao;
 
     public Vaga() {
+        this.dao = new VagaDAO();
     }
 
     public Vaga(int ID_vaga, String Descricaovaga, String Prerequisito, String Especificacoes, String Contato) {
@@ -21,6 +23,7 @@ public class Vaga {
         this.Prerequisito = Prerequisito;
         this.Especificacoes = Especificacoes;
         this.Contato = Contato;
+        this.dao = new VagaDAO();
     }
 
     public int getID_vaga() {
