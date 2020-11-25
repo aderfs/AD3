@@ -23,7 +23,7 @@ public class Vaga {
         this.Prerequisito = Prerequisito;
         this.Especificacoes = Especificacoes;
         this.Contato = Contato;
-        this.dao = new VagaDAO();
+        this.DAO = new VagaDAO();
     }
 
     public int getID_vaga() {
