@@ -1,6 +1,8 @@
 package Model;
+
 import java.util.*;
 import java.sql.*;
+import DAO.CandidaturaDAO;
 
 public class Candidatura {
     
@@ -42,32 +44,28 @@ public class Candidatura {
     }
     
      public ArrayList getListacandidaturas() {
-        return dao.getListacandidaturas();
+        return DAO.getListacandidaturas();
     }
 
     public boolean InserirCandidatura(Candidatura objeto) {
-        dao.InserirCandidatura(objeto);
+        DAO.InserirCandidatura(objeto);
         return true;
     }
 
     public boolean DeletarCandidatura(int ID_candidatura) {
-        dao.DeletarCandidatura(ID_candidatura);
+        DAO.DeletarCandidatura(ID_candidatura);
         return true;
     }
 
-    public boolean AtualizarCandidatura(Candidatura objeto) {
-        dao.AtualizarCurriculo(objeto);
+    public boolean AtualizarCandidatura(int id,Candidatura objeto) {
+        DAO.AtualizarCurriculo(objeto);
         return true;
     }
 
     public Curriculo dadosCandidatura(int ID_candidatura) {
-        dao.dadosCandidatura(ID_candidatura);
+        DAO.dadosCandidatura(ID_candidatura);
         return null;
     }
-
-    public int maiorID_candidatura() throws SQLException {
-        return dao.maiorID_candidatura();
-    }
-    
+ 
  
 }
