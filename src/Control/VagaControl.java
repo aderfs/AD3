@@ -51,7 +51,26 @@ public class VagaControl {
        return vaga.getListavagas();
    }
    
-   
+   @SuppressWarnings("unchecked")
+    public String[][] getMatrizCurriculo() {
+    
+        ArrayList<Vaga> listacurriculos = vaga.getListavagas();
+        int tamanho = listacurriculos.size();
+        
+        
+        String MatrizVaga[][] = new String[tamanho][5];
+        for (int i = 0; i < tamanho; i++) {
+            MatrizVaga[i][0] = listacurriculos.get(i).getID_vaga() + "";
+            MatrizVaga[i][1] = listacurriculos.get(i).getDescricaovaga();
+            MatrizVaga[i][2] = listacurriculos.get(i).getPrerequisito();
+            MatrizVaga[i][3] = listacurriculos.get(i).getEspecificacoes();
+            MatrizVaga[i][4] = listacurriculos.get(i).getContato();
+         
+            
+        }
+        
+        return MatrizVaga;
+    }
    
    
 }
