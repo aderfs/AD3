@@ -1,6 +1,8 @@
 package Model;
+
 import java.util.*;
 import java.sql.*;
+import CurriculoDAO;
 
 
 public class Curriculo {
