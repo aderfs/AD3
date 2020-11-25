@@ -54,12 +54,12 @@ public class CurriculoControl {
         
         String MatrizCurriculo[][] = new String[tamanho][5];
         for (int i = 0; i < tamanho; i++) {
-            MatrizCandidatura[i][0] = listacurriculos.get(i).getID_curriculo() + "";
-            MatrizCandidatura[i][1] = listacurriculos.get(i).getCurriculo();
-            MatrizCandidatura[i][2] = listacurriculos.get(i).getNome();
-            MatrizCandidatura[i][3] = listacurriculos.get(i).getCPF();
-            MatrizCandidatura[i][4] = listacurriculos.get(i).getRG();
-            MatrizCandidatura[i][5] = listacurriculos.get(i).getIdade() + "";
+            MatrizCurriculo[i][0] = listacurriculos.get(i).getID_curriculo() + "";
+            MatrizCurriculo[i][1] = listacurriculos.get(i).getCurriculo();
+            MatrizCurriculo[i][2] = listacurriculos.get(i).getNome();
+            MatrizCurriculo[i][3] = listacurriculos.get(i).getCPF();
+            MatrizCurriculo[i][4] = listacurriculos.get(i).getRG();
+            MatrizCurriculo[i][5] = listacurriculos.get(i).getIdade() + "";
          
             
         }
