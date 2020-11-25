@@ -1,7 +1,7 @@
-
 package Model;
 import java.util.*;
 import java.sql.*;
+import DAO.VagaDAO;
 
 
 public class Vaga {
@@ -64,34 +64,26 @@ public class Vaga {
     }
 
      public ArrayList getListavagas() {
-        return dao.getListavagas();
+        return DAO.getListavagas();
     }
 
-    public boolean InserirVagas(Vagas objeto) {
-        dao.InserirVagas(objeto);
+    public boolean InserirVagas(Vaga objeto) {
+        DAO.InserirVagas(objeto);
         return true;
     }
 
     public boolean DeletarVagas(int ID_vaga) {
-        dao.DeletarVagas(ID_vaga);
+        DAO.DeletarVagas(ID_vaga);
         return true;
     }
 
-    public boolean AtualizarVagas(Vagas objeto) {
-        dao.AtualizarVagas(objeto);
+    public boolean AtualizarVagas(int id,Vaga objeto) {
+        DAO.AtualizarVagas(objeto);
         return true;
     }
 
     public Curriculo DadosVagas(int ID_vaga) {
-        dao.DadosVagas(ID_vaga);
+        DAO.DadosVagas(ID_vaga);
         return null;
     }
-
-    public int maiorID_vaga() throws SQLException {
-        return dao.maiorID_vaga();
-    }
-    
-    
-    
-    
 }
