@@ -13,10 +13,11 @@ public class CandidaturaControl {
         this.candidatura = new Candidatura();
     }
     
-    public boolean CadastrarCandidatura(int Curriculo_ID_curriculo, int Vaga_ID_vaga) throws SQLException {
+    //Create
+    public boolean CadastrarCandidatura(int curriculo, int vaga) throws SQLException {
         
-        int id = candidatura.maiorID_candidatura() + 1; 
-        Candidatura objeto = new Candidatura(id, Curriculo_ID_curriculo, vaga);
+        int id = 0; //BD possui auto increment
+        Candidatura objeto = new Candidatura(id, curriculo, vaga);
         if(candidatura.InserirCandidatura(objeto)){
             return true;
         }else{
@@ -24,17 +25,17 @@ public class CandidaturaControl {
         }
     }
     
-    
-    public boolean EditarCandidatura(int id, int Curriculo_ID_curriculo, int Vaga_ID_vaga) {
-        Candidatura objeto = new Candidatura(id, Curriculo_ID_curriculo, Vaga_ID_vaga);
-        if(candidatura.AtualizarCandidatura(objeto)){
+    //Update
+    public boolean EditarCandidatura(int id, int curriculo, int vaga) {
+        Candidatura objeto = new Candidatura(id, curriculo, vaga);
+        if(candidatura.AtualizarCandidatura(id, objeto)){
             return true;
         }else{
             return false;
         }
     }
     
-    
+    //Delete
     public boolean ApagarCandidatura(int id) {
         if(candidatura.DeletarCandidatura(id)){
             return true;
@@ -43,13 +44,13 @@ public class CandidaturaControl {
         }
     }
     
-    
+    //Load
     public Candidatura LoadCandidatura(int id) {
-        candidatura.DadosCandidatura(id);
+        candidatura.dadosCandidatura(id);
         return null;
     }
     
-     
+    //Read
     public ArrayList getListacandidaturas() {
         return candidatura.getListacandidaturas();
     }
@@ -77,5 +78,3 @@ public class CandidaturaControl {
 
     
     
-    
-
