@@ -9,14 +9,17 @@ public class Candidatura {
     private int ID_candidatura;
     private int Curriculo_ID_curriculo;
     private int Vaga_ID_vaga;
+    private final CandidaturaDAO dao;
 
     public Candidatura() {
+        this.dao = new CandidaturaDAO();
     }
 
     public Candidatura(int ID_candidatura, int Curriculo_ID_curriculo, int Vaga_ID_vaga) {
         this.ID_candidatura = ID_candidatura;
         this.Curriculo_ID_curriculo = Curriculo_ID_curriculo;
         this.Vaga_ID_vaga = Vaga_ID_vaga;
+        this.dao = new CandidaturaDAO();
     }
 
     public int getID_candidatura() {
