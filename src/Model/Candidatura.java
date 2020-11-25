@@ -19,7 +19,7 @@ public class Candidatura {
         this.ID_candidatura = ID_candidatura;
         this.Curriculo_ID_curriculo = Curriculo_ID_curriculo;
         this.Vaga_ID_vaga = Vaga_ID_vaga;
-        this.dao = new CandidaturaDAO();
+        this.DAO = new CandidaturaDAO();
     }
 
     public int getID_candidatura() {
