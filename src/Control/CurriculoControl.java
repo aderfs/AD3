@@ -59,7 +59,7 @@ public class CurriculoControl {
             MatrizCandidatura[i][2] = listacurriculos.get(i).getNome();
             MatrizCandidatura[i][3] = listacurriculos.get(i).getCPF();
             MatrizCandidatura[i][4] = listacurriculos.get(i).getRG();
-            MatrizCandidatura[i][3] = listacurriculos.get(i).getIdade() + "";
+            MatrizCandidatura[i][5] = listacurriculos.get(i).getIdade() + "";
          
             
         }
