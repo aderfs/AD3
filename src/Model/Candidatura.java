@@ -9,10 +9,10 @@ public class Candidatura {
     private int ID_candidatura;
     private int Curriculo_ID_curriculo;
     private int Vaga_ID_vaga;
-    private final CandidaturaDAO dao;
+    private final CandidaturaDAO DAO;
 
     public Candidatura() {
-        this.dao = new CandidaturaDAO();
+        this.DAO = new CandidaturaDAO();
     }
 
     public Candidatura(int ID_candidatura, int Curriculo_ID_curriculo, int Vaga_ID_vaga) {
