@@ -13,7 +13,7 @@ public class CandidaturaControl {
         this.candidatura = new Candidatura();
     }
     
-    public boolean CadastrarCandidatura(int Curriculo_ID_curriculo, int vaga) throws SQLException {
+    public boolean CadastrarCandidatura(int Curriculo_ID_curriculo, int Vaga_ID_vaga) throws SQLException {
         
         int id = candidatura.maiorID_candidatura() + 1; 
         Candidatura objeto = new Candidatura(id, Curriculo_ID_curriculo, vaga);
@@ -25,8 +25,8 @@ public class CandidaturaControl {
     }
     
     
-    public boolean EditarCandidatura(int id, int Curriculo_ID_curriculo, int vaga) {
-        Candidatura objeto = new Candidatura(id, curriculo, vaga);
+    public boolean EditarCandidatura(int id, int Curriculo_ID_curriculo, int Vaga_ID_vaga) {
+        Candidatura objeto = new Candidatura(id, Curriculo_ID_curriculo, Vaga_ID_vaga);
         if(candidatura.AtualizarCandidatura(objeto)){
             return true;
         }else{
@@ -66,7 +66,7 @@ public class CandidaturaControl {
         for (int i = 0; i < tamanho; i++) {
             MatrizCandidatura[i][0] = listacandidaturas.get(i).getID_candidatura() + "";
             MatrizCandidatura[i][1] = listacandidaturas.get(i).getCurriculo_ID_curriculo() + "";
-            MatrizCandidatura[i][2] = listacandidaturas.get(i).getvaga() + "";
+            MatrizCandidatura[i][2] = listacandidaturas.get(i).getVaga_ID_vaga() + "";
          
             
         }
