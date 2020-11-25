@@ -73,31 +73,26 @@ public class Curriculo {
     }
     
     public ArrayList getListacurriculos() {
-        return dao.getListacurriculos();
+        return DAO.getListacurriculos();
     }
 
     public boolean InserirCurriculo(Curriculo objeto) {
-        dao.InserirCurriculo(objeto);
+        DAO.InserirCurriculo(objeto);
         return true;
     }
 
     public boolean DeletarCurriculo(int ID_curriculo) {
-        dao.DeletarCurriculo(ID_curriculo);
+        DAO.DeletarCurriculo(ID_curriculo);
         return true;
     }
 
     public boolean AtualizarCurriculo(Curriculo objeto) {
-        dao.AtualizarCurriculo(objeto);
+        DAO.AtualizarCurriculo(objeto);
         return true;
     }
 
     public Curriculo dadosCurriculo(int ID_curriculo) {
-        dao.dadosCurriculo(ID_curriculo);
+        DAO.dadosCurriculo(ID_curriculo);
         return null;
-    }
-
-    public int maiorID_curriculo() throws SQLException {
-        return dao.maiorID_curriculo();
-    }
-    
+    }   
 }
