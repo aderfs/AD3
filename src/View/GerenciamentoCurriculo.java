@@ -1,21 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
-/**
- *
- * @author danie
- */
+import Control.CurriculoControl;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 public class GerenciamentoCurriculo extends javax.swing.JFrame {
+
+    private CurriculoControl Controlador;
 
     /**
      * Creates new form GerenciamentoCandidato
      */
     public GerenciamentoCurriculo() {
         initComponents();
+        this.Controlador = new CurriculoControl();
+        this.carregaTabela();
+         {
+        
+    }
     }
 
     /**
@@ -28,24 +33,24 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        T_Gerenciamento_Curriculo = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        B_Alterar_Gerenciamento_Curriculo = new javax.swing.JButton();
-        B_Cancelar_Gerenciamento_Curriculo = new javax.swing.JButton();
-        B_Apagarr_Gerenciamento_Curriculo = new javax.swing.JButton();
+        Tabela_GCurriculo = new javax.swing.JTable();
+        L_Nome_GCurriculo = new javax.swing.JLabel();
+        C_Nome_GCurriculo = new javax.swing.JTextField();
+        L_Idade_GCurriculo = new javax.swing.JLabel();
+        C_Idade_GCurriculo = new javax.swing.JTextField();
+        C_CPF_GCurriculo = new javax.swing.JTextField();
+        C_RG_GCurriculo = new javax.swing.JTextField();
+        C_Curriculo_GCurriculo = new javax.swing.JTextField();
+        L_CPF_GCurriculo = new javax.swing.JLabel();
+        L_RG_GCurriculo = new javax.swing.JLabel();
+        L_Curriculo_GCurriculo = new javax.swing.JLabel();
+        B_Alterar_GCurriculo = new javax.swing.JButton();
+        B_Cancelar_GCurriculo = new javax.swing.JButton();
+        B_Apagar_GCurriculo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        T_Gerenciamento_Curriculo.setModel(new javax.swing.table.DefaultTableModel(
+        Tabela_GCurriculo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -64,60 +69,65 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(T_Gerenciamento_Curriculo);
+        Tabela_GCurriculo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Tabela_GCurriculoMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(Tabela_GCurriculo);
 
-        jLabel1.setText("Nome:");
+        L_Nome_GCurriculo.setText("Nome:");
 
-        jLabel2.setText("Idade:");
+        L_Idade_GCurriculo.setText("Idade:");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        C_Idade_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                C_Idade_GCurriculoActionPerformed(evt);
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        C_CPF_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                C_CPF_GCurriculoActionPerformed(evt);
             }
         });
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        C_RG_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                C_RG_GCurriculoActionPerformed(evt);
             }
         });
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        C_Curriculo_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                C_Curriculo_GCurriculoActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("CPF:");
+        L_CPF_GCurriculo.setText("CPF:");
 
-        jLabel4.setText("RG:");
+        L_RG_GCurriculo.setText("RG:");
 
-        jLabel5.setText("Curriculo:");
+        L_Curriculo_GCurriculo.setText("Curriculo:");
 
-        B_Alterar_Gerenciamento_Curriculo.setText("Alterar");
-        B_Alterar_Gerenciamento_Curriculo.addActionListener(new java.awt.event.ActionListener() {
+        B_Alterar_GCurriculo.setText("Alterar");
+        B_Alterar_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B_Alterar_Gerenciamento_CurriculoActionPerformed(evt);
+                B_Alterar_GCurriculoActionPerformed(evt);
             }
         });
 
-        B_Cancelar_Gerenciamento_Curriculo.setText("Cancelar");
-        B_Cancelar_Gerenciamento_Curriculo.addActionListener(new java.awt.event.ActionListener() {
+        B_Cancelar_GCurriculo.setText("Cancelar");
+        B_Cancelar_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B_Cancelar_Gerenciamento_CurriculoActionPerformed(evt);
+                B_Cancelar_GCurriculoActionPerformed(evt);
             }
         });
 
-        B_Apagarr_Gerenciamento_Curriculo.setText("Apagar");
-        B_Apagarr_Gerenciamento_Curriculo.addActionListener(new java.awt.event.ActionListener() {
+        B_Apagar_GCurriculo.setText("Apagar");
+        B_Apagar_GCurriculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B_Apagarr_Gerenciamento_CurriculoActionPerformed(evt);
+                B_Apagar_GCurriculoActionPerformed(evt);
             }
         });
 
@@ -129,23 +139,23 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_Curriculo_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(L_Nome_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_Nome_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_CPF_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_RG_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(L_RG_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(B_Cancelar_Gerenciamento_Curriculo)
+                        .addComponent(B_Cancelar_GCurriculo)
                         .addGap(65, 65, 65)
-                        .addComponent(B_Apagarr_Gerenciamento_Curriculo)
+                        .addComponent(B_Apagar_GCurriculo)
                         .addGap(65, 65, 65)
-                        .addComponent(B_Alterar_Gerenciamento_Curriculo))
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(B_Alterar_GCurriculo))
+                    .addComponent(L_Curriculo_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)))
+                        .addComponent(C_Idade_GCurriculo, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(L_CPF_GCurriculo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(L_Idade_GCurriculo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)))
                 .addContainerGap(325, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -153,30 +163,30 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jLabel1)
+                .addComponent(L_Nome_GCurriculo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(C_Nome_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(jLabel2)
+                .addComponent(L_Idade_GCurriculo)
                 .addGap(10, 10, 10)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(C_Idade_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(jLabel3)
+                .addComponent(L_CPF_GCurriculo)
                 .addGap(10, 10, 10)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(C_CPF_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(jLabel4)
+                .addComponent(L_RG_GCurriculo)
                 .addGap(10, 10, 10)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(C_RG_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(jLabel5)
+                .addComponent(L_Curriculo_GCurriculo)
                 .addGap(10, 10, 10)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(C_Curriculo_GCurriculo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(B_Apagarr_Gerenciamento_Curriculo)
-                    .addComponent(B_Alterar_Gerenciamento_Curriculo)
-                    .addComponent(B_Cancelar_Gerenciamento_Curriculo))
+                    .addComponent(B_Apagar_GCurriculo)
+                    .addComponent(B_Alterar_GCurriculo)
+                    .addComponent(B_Cancelar_GCurriculo))
                 .addGap(20, 20, 20))
         );
 
@@ -184,33 +194,110 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void C_Idade_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_Idade_GCurriculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_C_Idade_GCurriculoActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void C_CPF_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_CPF_GCurriculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_C_CPF_GCurriculoActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void C_RG_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_RG_GCurriculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_C_RG_GCurriculoActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void C_Curriculo_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_Curriculo_GCurriculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_C_Curriculo_GCurriculoActionPerformed
 
-    private void B_Alterar_Gerenciamento_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_Gerenciamento_CurriculoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_B_Alterar_Gerenciamento_CurriculoActionPerformed
+    private void B_Alterar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_GCurriculoActionPerformed
+        try {
+            // recebendo e validando dados da interface gráfica.
+            int ID = 0;
+            String Nome = "";
+            int Idade = 0;
+            String CPF = "";
+            String RG = "";
+            String Curriculo = "";
 
-    private void B_Cancelar_Gerenciamento_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_Gerenciamento_CurriculoActionPerformed
+            if (this.C_Nome_GCurriculo.getText().length() < 2) {
+                throw new Mensagens("Nome deve conter ao menos 2 caracteres.");
+            } else {
+                Nome = this.C_Nome_GCurriculo.getText();
+            }
+            if (this.C_Idade_GCurriculo.getText().length() < 0) {
+                throw new Mensagens("Idade deve conter ao menos 1 caracterer.");
+            } else {
+                Idade = Integer.parseInt(this.C_Idade_GCurriculo.getText());
+            }
+            if (this.C_CPF_GCurriculo.getText().length() < 2) {
+                throw new Mensagens("CPF deve conter ao menos 2 caracteres.");
+            } else {
+                CPF = this.C_CPF_GCurriculo.getText();
+            }
+            if (this.C_RG_GCurriculo.getText().length() < 2) {
+                throw new Mensagens("RG deve conter ao menos 2 caracteres.");
+            } else {
+                RG = this.C_RG_GCurriculo.getText();
+            }
+            if (this.C_Curriculo_GCurriculo.getText().length() < 2) {
+                throw new Mensagens("Curriculo deve conter ao menos 2 caracteres.");
+            } else {
+                Curriculo = this.C_Curriculo_GCurriculo.getText();
+            }
+            
+            if (this.Tabela_GCurriculo.getSelectedRow() == -1 ) {
+                throw new Mensagens("Primeiro Selecione um curriculo para alterar");
+            } else {
+                ID = Integer.parseInt(this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 0).toString());
+            }
+            
+            // envia os dados para o Controlador processar
+            if (this.Controlador.EditarCurriculo(ID, Nome, Curriculo, CPF, RG, Idade)){
+                
+                // limpa campos da interface
+                this.C_Nome_GCurriculo.setText("");
+                this.C_Idade_GCurriculo.setText("");
+                this.C_CPF_GCurriculo.setText("");
+                this.C_RG_GCurriculo.setText("");
+                this.C_Curriculo_GCurriculo.setText("");
+                JOptionPane.showMessageDialog(rootPane, "Aluno Alterado com Sucesso!");
+            }
+            System.out.println(this.Controlador.getListacurriculos().toString());
+
+        } catch (Mensagens erro) {
+            JOptionPane.showMessageDialog(null, erro.getMessage());
+        } catch (NumberFormatException erro2) {
+            JOptionPane.showMessageDialog(null, "Informe um número.");
+        } finally {
+            carregaTabela(); // atualiza a tabela.
+        }
+    }//GEN-LAST:event_B_Alterar_GCurriculoActionPerformed
+
+    private void B_Cancelar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_GCurriculoActionPerformed
         this.setVisible(false);
-    }//GEN-LAST:event_B_Cancelar_Gerenciamento_CurriculoActionPerformed
+    }//GEN-LAST:event_B_Cancelar_GCurriculoActionPerformed
 
-    private void B_Apagarr_Gerenciamento_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagarr_Gerenciamento_CurriculoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_B_Apagarr_Gerenciamento_CurriculoActionPerformed
+    private void B_Apagar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GCurriculoActionPerformed
+       
+    }//GEN-LAST:event_B_Apagar_GCurriculoActionPerformed
+
+    private void Tabela_GCurriculoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GCurriculoMouseClicked
+        if (this.Tabela_GCurriculo.getSelectedRow() != -1) {
+
+            String Nome = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 1).toString();
+            String Idade = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 2).toString();
+            String CPF = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 3).toString();
+            String RG = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 4).toString();
+            String Curriculo = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 5).toString();
+
+            this.C_Nome_GCurriculo.setText(Nome);
+            this.C_Idade_GCurriculo.setText(Idade);
+            this.C_CPF_GCurriculo.setText(CPF);
+            this.C_RG_GCurriculo.setText(RG);
+            this.C_Curriculo_GCurriculo.setText(Curriculo);
+        }
+    }//GEN-LAST:event_Tabela_GCurriculoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -249,20 +336,39 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton B_Alterar_Gerenciamento_Curriculo;
-    private javax.swing.JButton B_Apagarr_Gerenciamento_Curriculo;
-    private javax.swing.JButton B_Cancelar_Gerenciamento_Curriculo;
-    private javax.swing.JTable T_Gerenciamento_Curriculo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton B_Alterar_GCurriculo;
+    private javax.swing.JButton B_Apagar_GCurriculo;
+    private javax.swing.JButton B_Cancelar_GCurriculo;
+    private javax.swing.JTextField C_CPF_GCurriculo;
+    private javax.swing.JTextField C_Curriculo_GCurriculo;
+    private javax.swing.JTextField C_Idade_GCurriculo;
+    private javax.swing.JTextField C_Nome_GCurriculo;
+    private javax.swing.JTextField C_RG_GCurriculo;
+    private javax.swing.JLabel L_CPF_GCurriculo;
+    private javax.swing.JLabel L_Curriculo_GCurriculo;
+    private javax.swing.JLabel L_Idade_GCurriculo;
+    private javax.swing.JLabel L_Nome_GCurriculo;
+    private javax.swing.JLabel L_RG_GCurriculo;
+    private javax.swing.JTable Tabela_GCurriculo;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
+
+    public void carregaTabela() {
+        DefaultTableModel modelo = (DefaultTableModel) this.Tabela_GCurriculo.getModel();
+        modelo.setNumRows(0);
+
+        String linhasMatriz[][] = Controlador.getMatrizCurriculo();
+        for (int i = 0; i < linhasMatriz.length; i++) {
+            modelo.addRow(new Object[]{
+                linhasMatriz[i][0],
+                linhasMatriz[i][1],
+                linhasMatriz[i][2],
+                linhasMatriz[i][3],
+                linhasMatriz[i][4],
+                linhasMatriz[i][5],
+            });
+
+        }
+    }
 }
+

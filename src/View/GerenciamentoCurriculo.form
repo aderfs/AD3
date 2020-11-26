@@ -27,24 +27,24 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTextField5" min="-2" pref="250" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="jTextField1" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="jTextField3" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="jTextField4" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="C_Curriculo_GCurriculo" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="L_Nome_GCurriculo" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="C_Nome_GCurriculo" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="C_CPF_GCurriculo" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="C_RG_GCurriculo" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="L_RG_GCurriculo" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="B_Cancelar_Gerenciamento_Curriculo" min="-2" max="-2" attributes="0"/>
+                      <Component id="B_Cancelar_GCurriculo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                      <Component id="B_Apagarr_Gerenciamento_Curriculo" min="-2" max="-2" attributes="0"/>
+                      <Component id="B_Apagar_GCurriculo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                      <Component id="B_Alterar_Gerenciamento_Curriculo" min="-2" max="-2" attributes="0"/>
+                      <Component id="B_Alterar_GCurriculo" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLabel5" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="L_Curriculo_GCurriculo" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel2" alignment="0" pref="40" max="32767" attributes="0"/>
+                      <Component id="C_Idade_GCurriculo" alignment="0" max="32767" attributes="0"/>
+                      <Component id="L_CPF_GCurriculo" alignment="0" max="32767" attributes="0"/>
+                      <Component id="L_Idade_GCurriculo" alignment="0" pref="40" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="325" max="32767" attributes="0"/>
@@ -56,30 +56,30 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jScrollPane1" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="L_Nome_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+              <Component id="C_Nome_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Component id="L_Idade_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
+              <Component id="C_Idade_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <Component id="L_CPF_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
+              <Component id="C_CPF_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <Component id="L_RG_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jTextField4" min="-2" max="-2" attributes="0"/>
+              <Component id="C_RG_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+              <Component id="L_Curriculo_GCurriculo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jTextField5" min="-2" pref="100" max="-2" attributes="0"/>
+              <Component id="C_Curriculo_GCurriculo" min="-2" pref="100" max="-2" attributes="0"/>
               <EmptySpace pref="30" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="B_Apagarr_Gerenciamento_Curriculo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="B_Alterar_Gerenciamento_Curriculo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="B_Cancelar_Gerenciamento_Curriculo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="B_Apagar_GCurriculo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="B_Alterar_GCurriculo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="B_Cancelar_GCurriculo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
@@ -94,7 +94,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="T_Gerenciamento_Curriculo">
+        <Component class="javax.swing.JTable" name="Tabela_GCurriculo">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="6" rowCount="4">
@@ -144,78 +144,81 @@
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Tabela_GCurriculoMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="L_Nome_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nome:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="C_Nome_GCurriculo">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="L_Idade_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Idade:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="C_Idade_GCurriculo">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="C_Idade_GCurriculoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="C_CPF_GCurriculo">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="C_CPF_GCurriculoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField4">
+    <Component class="javax.swing.JTextField" name="C_RG_GCurriculo">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="C_RG_GCurriculoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField5">
+    <Component class="javax.swing.JTextField" name="C_Curriculo_GCurriculo">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="C_Curriculo_GCurriculoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="L_CPF_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="CPF:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="L_RG_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="RG:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="L_Curriculo_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Curriculo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="B_Alterar_Gerenciamento_Curriculo">
+    <Component class="javax.swing.JButton" name="B_Alterar_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Alterar_Gerenciamento_CurriculoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Alterar_GCurriculoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="B_Cancelar_Gerenciamento_Curriculo">
+    <Component class="javax.swing.JButton" name="B_Cancelar_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Cancelar_Gerenciamento_CurriculoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Cancelar_GCurriculoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="B_Apagarr_Gerenciamento_Curriculo">
+    <Component class="javax.swing.JButton" name="B_Apagar_GCurriculo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Apagar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Apagarr_Gerenciamento_CurriculoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Apagar_GCurriculoActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
