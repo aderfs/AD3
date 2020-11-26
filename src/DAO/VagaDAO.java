@@ -147,17 +147,17 @@ public class VagaDAO {
     public Vaga DadosVagas(int ID_vaga) {
 
         Vaga objeto = new Vaga();
-        objeto.setId(ID_vaga);
+        objeto.setID_vaga(ID_vaga);
 
         try {
             Statement stmt = this.getConexao().createStatement();
             ResultSet res = stmt.executeQuery("SELECT * id FROM tb_vaga WHERE id = " + ID_vaga);
             res.next();
 
-            objeto.setDescricaovaga = res.getString("Descricaovaga");
-            objeto.setPrerequisito = res.getString("Prerequisito");
-            objeto.setEspecificacoes = res.getString("Especificacoes");
-            objeto.setContato = res.getString("Contato");
+            objeto.setDescricaovaga(res.getString("Descricaovaga"));
+            objeto.setPrerequisito(res.getString("Prerequisito"));
+            objeto.setEspecificacoes(res.getString("Especificacoes"));
+            objeto.setContato(res.getString("Contato"));
 
             stmt.close();
 

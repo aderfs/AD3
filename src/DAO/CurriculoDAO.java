@@ -150,18 +150,18 @@ public class CurriculoDAO {
     public Curriculo dadosCurriculo(int ID_curriculo) {
 
         Curriculo objeto = new Curriculo();
-        objeto.setId(ID_curriculo);
+        objeto.setID_curriculo(ID_curriculo);
 
         try {
             Statement stmt = this.getConexao().createStatement();
             ResultSet res = stmt.executeQuery("SELECT * id FROM tb_curriculo WHERE id = " + ID_curriculo);
             res.next();
 
-            objeto.setNome = res.getString("Nome");
-            objeto.setCurriculo = res.getString("Curriculo");
-            objeto.setCPF = res.getString("CPF");
-            objeto.setRG = res.getString("RG");
-            objeto.setIdade = res.getInt("Idade");
+            objeto.setNome(res.getString("Nome"));
+            objeto.setCurriculo(res.getString("Curriculo"));
+            objeto.setCPF(res.getString("CPF"));
+            objeto.setRG(res.getString("RG"));
+            objeto.setIdade(res.getInt("Idade"));
 
             stmt.close();
 

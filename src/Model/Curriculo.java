@@ -33,7 +33,7 @@ public class Curriculo {
         return ID_curriculo;
     }
 
-    public void setID_candidato(int ID_curriculo) {
+    public void setID_curriculo(int ID_curriculo) {
         this.ID_curriculo = ID_curriculo;
     }
     
@@ -41,7 +41,7 @@ public class Curriculo {
         return Nome;
     }
     
-    public void setNome() {
+    public void setNome(String Nome) {
         this.Nome = Nome;
     }
 

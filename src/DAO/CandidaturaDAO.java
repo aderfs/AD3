@@ -84,7 +84,7 @@ public class CandidaturaDAO {
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);
 
-            stmt.setInt(1, objeto.getID_curriculo());
+            stmt.setInt(1, objeto.getID_candidatura());
             stmt.setInt(2, objeto.getCurriculo_ID_curriculo());
             stmt.setInt(3, objeto.getVaga_ID_vaga());
 
@@ -140,15 +140,15 @@ public class CandidaturaDAO {
     public Candidatura dadosCandidatura(int ID_candidatura) {
 
         Candidatura objeto = new Candidatura();
-        objeto.setId(ID_candidatura);
+        objeto.setID_candidatura(ID_candidatura);
 
         try {
             Statement stmt = this.getConexao().createStatement();
             ResultSet res = stmt.executeQuery("SELECT * id FROM tb_candidatura WHERE id = " + ID_candidatura);
             res.next();
 
-            objeto.setID_candidatura = res.getInt("Curriculo_ID_curriculo");
-            objeto.setVaga_ID_vaga = res.getInt("Vaga_ID_vaga");
+            objeto.setCurriculo_ID_curriculo(res.getInt("Curriculo_ID_curriculo"));
+            objeto.setVaga_ID_vaga(res.getInt("Vaga_ID_vaga"));
 
             stmt.close();
 
