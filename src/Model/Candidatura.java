@@ -61,7 +61,7 @@ public class Candidatura {
     }
 
     public boolean AtualizarCandidatura(int id,Candidatura objeto) {
-        DAO.AtualizarCurriculo(objeto);
+        DAO.AtualizarCandidatura(objeto);
         return true;
     }
 
