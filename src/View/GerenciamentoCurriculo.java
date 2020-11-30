@@ -281,12 +281,12 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
             // validando dados da interface gr�fica.
             int id = 0;
             if (this.Tabela_GCurriculo.getSelectedRow() == -1) {
-                throw new Mensagens("Primeiro Selecione um Aluno para APAGAR");
+                throw new Mensagens("Primeiro Selecione um candidato para APAGAR");
             } else {
                 id = Integer.parseInt(this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 0).toString());
             }
             // retorna 0 -> primeiro bot�o | 1 -> segundo bot�o | 2 -> terceiro bot�o
-            int resposta_usuario = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja APAGAR este Aluno ?");
+            int resposta_usuario = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja APAGAR este candidato?");
 
             if (resposta_usuario == 0) {// clicou em SIM
 
@@ -299,7 +299,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
                     this.C_CPF_GCurriculo.setText("");
                     this.C_RG_GCurriculo.setText("");
                     this.C_Curriculo_GCurriculo.setText("");
-                    JOptionPane.showMessageDialog(rootPane, "Aluno Apagado com Sucesso!");
+                    JOptionPane.showMessageDialog(rootPane, "Candidato APAGADO com Sucesso!");
                 }
             }
 
