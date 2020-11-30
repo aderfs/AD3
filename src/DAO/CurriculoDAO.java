@@ -14,22 +14,22 @@ public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO 
     public CurriculoDAO() {
     }
 
-    public int maiorID() throws SQLException {
-
-        int maiorID = 0;
-        try {
-            Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT MAX(id) id FROM tb_curriculo");
-            res.next();
-            maiorID = res.getInt("id");
-
-            stmt.close();
-
-        } catch (SQLException ex) {
-        }
-
-        return maiorID;
-    }
+//    public int maiorID() throws SQLException {
+//
+//        int maiorID = 0;
+//        try {
+//            Statement stmt = this.getConexao().createStatement();
+//            ResultSet res = stmt.executeQuery("SELECT MAX(id) id FROM tb_curriculo");
+//            res.next();
+//            maiorID = res.getInt("id");
+//
+//            stmt.close();
+//
+//        } catch (SQLException ex) {
+//        }
+//
+//        return maiorID;
+//    }
 
     //Conectar no BD
     public Connection getConexao() {
@@ -130,7 +130,8 @@ public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO 
     public boolean DeletarCurriculo(int ID_curriculo) {
         try {
             Statement stmt = this.getConexao().createStatement();
-            stmt.executeUpdate("DELETE FROM tb_curriculo WHERE id = " + ID_curriculo);
+//            JOptionPane.showMessageDialog(null, ID_curriculo);
+            stmt.executeUpdate("DELETE FROM tb_curriculo WHERE ID_curriculo = " + ID_curriculo);
             stmt.close();
 
         } catch (SQLException erro) {
@@ -143,7 +144,7 @@ public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO 
     //Atualizar o curriculo através de um objeto Curriculo
     public boolean AtualizarCurriculo(Curriculo objeto) {
 
-        String sql = "UPDATE tb_curriculo set Nome = ? ,Curriculo = ? ,CPF = ? ,RG = ?, Idade = ? WHERE id = ?";
+        String sql = "UPDATE tb_curriculo set Nome = ? ,Curriculo = ? ,CPF = ? ,RG = ?, Idade = ? WHERE ID_curriculo = ?";
 
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);

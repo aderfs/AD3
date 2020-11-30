@@ -103,7 +103,7 @@ public class CandidaturaDAO {
     public boolean DeletarCandidatura(int ID_candidatura) {
         try {
             Statement stmt = this.getConexao().createStatement();
-            stmt.executeUpdate("DELETE FROM tb_candidatura WHERE id = " + ID_candidatura);
+            stmt.executeUpdate("DELETE FROM tb_candidatura WHERE ID_candidatura = " + ID_candidatura);
             stmt.close();
 
         } catch (SQLException erro) {
@@ -116,7 +116,7 @@ public class CandidaturaDAO {
     //Atualizar a candidatura através de um objeto Candidatura
     public boolean AtualizarCandidatura(Candidatura objeto) {
 
-        String sql = "UPDATE tb_candidatura set ID_candidatura = ? ,Curriculo_ID_curriculo = ? ,Vaga_ID_vaga = ? WHERE id = ?";
+        String sql = "UPDATE tb_candidatura set ID_candidatura = ? ,Curriculo_ID_curriculo = ? ,Vaga_ID_vaga = ? WHERE ID_candidatura = ?";
 
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);
@@ -144,7 +144,7 @@ public class CandidaturaDAO {
 
         try {
             Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * id FROM tb_candidatura WHERE id = " + ID_candidatura);
+            ResultSet res = stmt.executeQuery("SELECT * id FROM tb_candidatura WHERE ID_candidatura = " + ID_candidatura);
             res.next();
 
             objeto.setCurriculo_ID_curriculo(res.getInt("Curriculo_ID_curriculo"));

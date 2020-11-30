@@ -108,7 +108,7 @@ public class VagaDAO {
     public boolean DeletarVagas(int ID_vaga) {
         try {
             Statement stmt = this.getConexao().createStatement();
-            stmt.executeUpdate("DELETE FROM tb_vaga WHERE id = " + ID_vaga);
+            stmt.executeUpdate("DELETE FROM tb_vaga WHERE ID_vaga = " + ID_vaga);
             stmt.close();
 
         } catch (SQLException erro) {
@@ -121,7 +121,7 @@ public class VagaDAO {
     //Atualizar uma vaga através de um objeto Vaga
     public boolean AtualizarVagas(Vaga objeto) {
 
-        String sql = "UPDATE tb_vaga set Descricaovaga = ? ,Prerequisito = ? ,Especificacoes = ? ,Contato = ? WHERE id = ?";
+        String sql = "UPDATE tb_vaga set Descricaovaga = ? ,Prerequisito = ? ,Especificacoes = ? ,Contato = ? WHERE ID_vaga = ?";
 
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);
@@ -151,7 +151,7 @@ public class VagaDAO {
 
         try {
             Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * id FROM tb_vaga WHERE id = " + ID_vaga);
+            ResultSet res = stmt.executeQuery("SELECT * id FROM tb_vaga WHERE ID_vaga = " + ID_vaga);
             res.next();
 
             objeto.setDescricaovaga(res.getString("Descricaovaga"));
