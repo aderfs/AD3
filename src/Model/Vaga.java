@@ -6,7 +6,7 @@ import DAO.VagaDAO;
 
 public class Vaga {
     
-    public static int ID_vaga;
+    public int ID_vaga;
     private String Descricaovaga;
     private String Prerequisito;
     private String Especificacoes;
