@@ -7,7 +7,7 @@ import DAO.CurriculoDAO;
 
 public class Curriculo {
     
-    public static int ID_curriculo;
+    public int ID_curriculo;
     private String Nome;
     private String Curriculo;
     private String CPF;
