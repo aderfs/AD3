@@ -3,13 +3,32 @@ package DAO;
 import Model.Curriculo;
 import java.util.*;
 import java.sql.*;
+import javax.swing.JOptionPane;
 
-public class CurriculoDAO {
+public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO MAIOR ID COM AUTOINCREMENT?
+                            //PQ TODOS OS IDS NO GERENCIAR CURRICULO SAO IGUAIS? ESSE É O PROBLEMA P APAGAR? VEREMOS NO PROXIMO EP DE AULA DE PROGRAMAÇÃO
 
     public static ArrayList<Curriculo> ListaCurriculo = new ArrayList<Curriculo>();
 
     //Construtor Vazio
     public CurriculoDAO() {
+    }
+
+    public int maiorID() throws SQLException {
+
+        int maiorID = 0;
+        try {
+            Statement stmt = this.getConexao().createStatement();
+            ResultSet res = stmt.executeQuery("SELECT MAX(id) id FROM tb_curriculo");
+            res.next();
+            maiorID = res.getInt("id");
+
+            stmt.close();
+
+        } catch (SQLException ex) {
+        }
+
+        return maiorID;
     }
 
     //Conectar no BD
@@ -61,6 +80,7 @@ public class CurriculoDAO {
             while (res.next()) {
 
                 int id = res.getInt("ID_curriculo");  //parametros
+//                JOptionPane.showMessageDialog(null, id);
                 String nome = res.getString("Nome");
                 String curriculo = res.getString("Curriculo");
                 String CPF = res.getString("CPF");
@@ -88,7 +108,7 @@ public class CurriculoDAO {
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);     //conecta ao bd e prepara o Statement com os valores da String sql
 
-            stmt.setInt(1, objeto.getID_curriculo());                             
+            stmt.setInt(1, objeto.getID_curriculo());
             stmt.setString(2, objeto.getNome());
             stmt.setString(3, objeto.getCurriculo());
             stmt.setString(4, objeto.getCPF());

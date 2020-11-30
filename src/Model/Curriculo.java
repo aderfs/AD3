@@ -4,9 +4,8 @@ import java.util.*;
 import java.sql.*;
 import DAO.CurriculoDAO;
 
-
 public class Curriculo {
-    
+
     public int ID_curriculo;
     private String Nome;
     private String Curriculo;
@@ -36,11 +35,11 @@ public class Curriculo {
     public void setID_curriculo(int ID_curriculo) {
         this.ID_curriculo = ID_curriculo;
     }
-    
+
     public String getNome() {
         return Nome;
     }
-    
+
     public void setNome(String Nome) {
         this.Nome = Nome;
     }
@@ -76,7 +75,7 @@ public class Curriculo {
     public void setIdade(int Idade) {
         this.Idade = Idade;
     }
-    
+
     public ArrayList getListacurriculos() {
         return DAO.getListacurriculos();
     }
@@ -99,5 +98,10 @@ public class Curriculo {
     public Curriculo dadosCurriculo(int ID_curriculo) {
         DAO.dadosCurriculo(ID_curriculo);
         return null;
-    }   
+    }
+
+    // retorna o maior ID da nossa base de dados
+    public int maiorID() throws SQLException {
+        return DAO.maiorID();
+    }
 }

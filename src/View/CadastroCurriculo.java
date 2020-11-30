@@ -157,7 +157,7 @@ public class CadastroCurriculo extends javax.swing.JFrame {
 
     private void B_Cadastrar_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cadastrar_CurriculoActionPerformed
         try {
-            // recebendo e validando dados da interface gráfica.
+            // recebendo e validando dados da interface grï¿½fica.
             String Nome = "";
             int Idade = 0;
             String CPF = "";
@@ -205,7 +205,7 @@ public class CadastroCurriculo extends javax.swing.JFrame {
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um número.");
+            JOptionPane.showMessageDialog(null, "Informe um nï¿½mero.");
         } catch (SQLException ex) {
             Logger.getLogger(CadastroCurriculo.class.getName()).log(Level.SEVERE, null, ex);
         }

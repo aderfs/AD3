@@ -1,9 +1,7 @@
 package View;
 
 import Control.CurriculoControl;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,9 +16,9 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
         initComponents();
         this.Controlador = new CurriculoControl();
         this.carregaTabela();
-         {
-        
-    }
+        {
+
+        }
     }
 
     /**
@@ -58,7 +56,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "ID ", "Nome ", "Idade", "CPF", "RG", "Curriculo"
+                "ID ", "Nome ", "Curriculo", "CPF", "RG", "Idade"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -212,8 +210,8 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
 
     private void B_Alterar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_GCurriculoActionPerformed
         try {
-            // recebendo e validando dados da interface gráfica.
-            int ID = 0;
+            // recebendo e validando dados da interface grï¿½fica.
+            int id = 0;
             String Nome = "";
             int Idade = 0;
             String CPF = "";
@@ -245,16 +243,16 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
             } else {
                 Curriculo = this.C_Curriculo_GCurriculo.getText();
             }
-            
-            if (this.Tabela_GCurriculo.getSelectedRow() == -1 ) {
+
+            if (this.Tabela_GCurriculo.getSelectedRow() == -1) {
                 throw new Mensagens("Primeiro Selecione um curriculo para alterar");
             } else {
-                ID = Integer.parseInt(this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 0).toString());
+                id = Integer.parseInt(this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 0).toString());
             }
-            
+
             // envia os dados para o Controlador processar
-            if (this.Controlador.EditarCurriculo(ID, Nome, Curriculo, CPF, RG, Idade)){
-                
+            if (this.Controlador.EditarCurriculo(id, Nome, Curriculo, CPF, RG, Idade)) {
+
                 // limpa campos da interface
                 this.C_Nome_GCurriculo.setText("");
                 this.C_Idade_GCurriculo.setText("");
@@ -268,7 +266,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um número.");
+            JOptionPane.showMessageDialog(null, "Informe um nï¿½mero.");
         } finally {
             carregaTabela(); // atualiza a tabela.
         }
@@ -279,17 +277,50 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     }//GEN-LAST:event_B_Cancelar_GCurriculoActionPerformed
 
     private void B_Apagar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GCurriculoActionPerformed
-       
+        try {
+            // validando dados da interface grï¿½fica.
+            int id = 0;
+            if (this.Tabela_GCurriculo.getSelectedRow() == -1) {
+                throw new Mensagens("Primeiro Selecione um Aluno para APAGAR");
+            } else {
+                id = Integer.parseInt(this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 0).toString());
+            }
+            // retorna 0 -> primeiro botï¿½o | 1 -> segundo botï¿½o | 2 -> terceiro botï¿½o
+            int resposta_usuario = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja APAGAR este Aluno ?");
+
+            if (resposta_usuario == 0) {// clicou em SIM
+
+                // envia os dados para o Controlador processar
+                if (this.Controlador.DeletarCurriculo(id)) {
+                    
+                    // limpa campos da interface
+                    this.C_Nome_GCurriculo.setText("");
+                    this.C_Idade_GCurriculo.setText("");
+                    this.C_CPF_GCurriculo.setText("");
+                    this.C_RG_GCurriculo.setText("");
+                    this.C_Curriculo_GCurriculo.setText("");
+                    JOptionPane.showMessageDialog(rootPane, "Aluno Apagado com Sucesso!");
+                }
+            }
+
+            System.out.println(this.Controlador.getListacurriculos().toString());
+
+        } catch (Mensagens erro) {
+            JOptionPane.showMessageDialog(null, erro.getMessage());
+        } finally {
+            // atualiza a tabela.
+            carregaTabela();
+        }
     }//GEN-LAST:event_B_Apagar_GCurriculoActionPerformed
 
     private void Tabela_GCurriculoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GCurriculoMouseClicked
         if (this.Tabela_GCurriculo.getSelectedRow() != -1) {
 
             String Nome = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 1).toString();
-            String Idade = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 2).toString();
+            String Idade = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 5).toString();
             String CPF = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 3).toString();
             String RG = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 4).toString();
-            String Curriculo = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 5).toString();
+            String Curriculo = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 2).toString();
 
             this.C_Nome_GCurriculo.setText(Nome);
             this.C_Idade_GCurriculo.setText(Idade);
@@ -302,6 +333,25 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    @SuppressWarnings("unchecked")
+    public void carregaTabela() {
+        DefaultTableModel modelo = (DefaultTableModel) this.Tabela_GCurriculo.getModel();
+        modelo.setNumRows(0);
+
+        String linhasMatriz[][] = Controlador.getMatrizCurriculo();
+        for (int i = 0; i < linhasMatriz.length; i++) {
+//            JOptionPane.showMessageDialog(null, linhasMatriz[i][0]);
+            modelo.addRow(new Object[]{
+                linhasMatriz[i][0],
+                linhasMatriz[i][1],
+                linhasMatriz[i][2],
+                linhasMatriz[i][3],
+                linhasMatriz[i][4],
+                linhasMatriz[i][5]});
+
+        }
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -353,22 +403,4 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
-    public void carregaTabela() {
-        DefaultTableModel modelo = (DefaultTableModel) this.Tabela_GCurriculo.getModel();
-        modelo.setNumRows(0);
-
-        String linhasMatriz[][] = Controlador.getMatrizCurriculo();
-        for (int i = 0; i < linhasMatriz.length; i++) {
-            modelo.addRow(new Object[]{
-                linhasMatriz[i][0],
-                linhasMatriz[i][1],
-                linhasMatriz[i][2],
-                linhasMatriz[i][3],
-                linhasMatriz[i][4],
-                linhasMatriz[i][5],
-            });
-
-        }
-    }
 }
-
