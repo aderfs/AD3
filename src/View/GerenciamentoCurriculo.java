@@ -12,10 +12,9 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     public GerenciamentoCurriculo() {
         initComponents();
         this.Controlador = new CurriculoControl();
-        this.carregaTabela();      
+        this.carregaTabela();
     }
 
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -249,14 +248,14 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
                 this.C_CPF_GCurriculo.setText("");
                 this.C_RG_GCurriculo.setText("");
                 this.C_Curriculo_GCurriculo.setText("");
-                JOptionPane.showMessageDialog(rootPane, "Aluno Alterado com Sucesso!");
+                JOptionPane.showMessageDialog(rootPane, "Curriculo Alterado com Sucesso!");
             }
             System.out.println(this.Controlador.getListacurriculos().toString());
 
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um n�mero.");
+            JOptionPane.showMessageDialog(null, "Informe um número.");
         } finally {
             carregaTabela(); // atualiza a tabela.
         }
@@ -282,7 +281,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
 
                 // envia os dados para o Controlador processar
                 if (this.Controlador.DeletarCurriculo(id)) {
-                    
+
                     // limpa campos da interface
                     this.C_Nome_GCurriculo.setText("");
                     this.C_Idade_GCurriculo.setText("");
@@ -330,7 +329,6 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
 
         String linhasMatriz[][] = Controlador.getMatrizCurriculo();
         for (int i = 0; i < linhasMatriz.length; i++) {
-//            JOptionPane.showMessageDialog(null, linhasMatriz[i][0]);
             modelo.addRow(new Object[]{
                 linhasMatriz[i][0],
                 linhasMatriz[i][1],

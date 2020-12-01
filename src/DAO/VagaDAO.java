@@ -3,6 +3,7 @@ package DAO;
 import Model.Vaga;
 import java.util.*;
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class VagaDAO {
 
@@ -61,6 +62,7 @@ public class VagaDAO {
             while (res.next()) {
 
                 int id = res.getInt("ID_vaga");  //parametros
+//                JOptionPane.showMessageDialog(null, id);
                 String Des = res.getString("Descricaovaga");
                 String Pre = res.getString("Prerequisito");
                 String Especi = res.getString("Especificacoes");

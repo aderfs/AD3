@@ -45,7 +45,7 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, false, false
+                false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -58,9 +58,6 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(Tabela_GCandidatura);
-        if (Tabela_GCandidatura.getColumnModel().getColumnCount() > 0) {
-            Tabela_GCandidatura.getColumnModel().getColumn(0).setResizable(false);
-        }
 
         B_Cancelar_GCandidatura.setText("Cancelar");
         B_Cancelar_GCandidatura.addActionListener(new java.awt.event.ActionListener() {
@@ -166,7 +163,6 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
     private void B_Apagar_GCandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GCandidaturaActionPerformed
         try {
             // validando dados da interface gr�fica.
-            int id = 0;
             int ID_candidatura = 0;
             int ID_vaga = 0;
             int ID_curriculo = 0;
@@ -174,7 +170,7 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             if (this.Tabela_GCandidatura.getSelectedRow() == -1) {
                 throw new Mensagens("Primeiro Selecione um candidato para APAGAR");
             } else {
-                id = Integer.parseInt(this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 0).toString());
+                ID_candidatura = Integer.parseInt(this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 0).toString());
             }
             // retorna 0 -> primeiro bot�o | 1 -> segundo bot�o | 2 -> terceiro bot�o
             int resposta_usuario = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja APAGAR esta candidatura?");
@@ -182,7 +178,7 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             if (resposta_usuario == 0) {// clicou em SIM
 
                 // envia os dados para o Controlador processar
-                if (this.Controlador.ApagarCandidatura(id)) {
+                if (this.Controlador.ApagarCandidatura(ID_candidatura)) {
                     
                     // limpa campos da interface
                     this.C_IDCandidatura_GCandidatura.setText("");
@@ -210,15 +206,15 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             int ID_curriculo = 0;
             
 
-            if (this.C_IDCandidatura_GCandidatura.getText().length() < 0) {
-                throw new Mensagens("ID de candidatura deve conter ao menos 1 caracteres.");
-            } else {
-                ID_candidatura = Integer.parseInt(this.C_IDCandidatura_GCandidatura.getText());
-            }
             if (this.C_IDCurriculo_GCandidatura.getText().length() < 0) {
+                throw new Mensagens("ID de curriculo deve conter ao menos 1 caracteres.");
+            } else {
+                ID_curriculo = Integer.parseInt(this.C_IDCurriculo_GCandidatura.getText());
+            }
+            if (this.C_IDV_GCandidatura1.getText().length() < 0) {
                 throw new Mensagens("ID de vaga deve conter ao menos 1 caracterer.");
             } else {
-                ID_vaga = Integer.parseInt(this.C_IDCurriculo_GCandidatura.getText());
+                ID_vaga = Integer.parseInt(this.C_IDV_GCandidatura1.getText());
             }
             
 
@@ -228,14 +224,14 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
                 // limpa campos da interface
                 this.C_IDCandidatura_GCandidatura.setText("");
                 this.C_IDCurriculo_GCandidatura.setText("");
-                JOptionPane.showMessageDialog(rootPane, "Aluno Alterado com Sucesso!");
+                JOptionPane.showMessageDialog(rootPane, "Candidatura Alterada com Sucesso!");
             }
             System.out.println(this.Controlador.getListacandidaturas().toString());
 
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um n�mero.");
+            JOptionPane.showMessageDialog(null, "Informe um numero.");
         } finally {
             carregaTabela(); // atualiza a tabela.
         }
@@ -254,10 +250,12 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
              if (this.Tabela_GCandidatura.getSelectedRow() != -1) {
 
             String ID_candidatura = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 1).toString();
-            String ID_vaga = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 2).toString();
+            String ID_vaga = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 3).toString();
+            String ID_curriculo = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 2).toString();
 
             this.C_IDCandidatura_GCandidatura.setText(ID_candidatura);
-            this.C_IDCurriculo_GCandidatura.setText(ID_vaga);
+            this.C_IDCurriculo_GCandidatura.setText(ID_curriculo);
+            this.C_IDV_GCandidatura1.setText(ID_vaga);
         }
     }//GEN-LAST:event_Tabela_GCandidaturaMouseClicked
 
@@ -268,7 +266,7 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
+    @SuppressWarnings("unchecked")
      public void carregaTabela() {
         DefaultTableModel modelo = (DefaultTableModel) this.Tabela_GCandidatura.getModel();
         modelo.setNumRows(0);
@@ -276,9 +274,12 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
         String linhasMatriz[][] = Controlador.getMatrizCandidatura();
         for (int i = 0; i < linhasMatriz.length; i++) {
 //            JOptionPane.showMessageDialog(null, linhasMatriz[i][0]);
+//            JOptionPane.showMessageDialog(null, linhasMatriz[i][1]);
+//            JOptionPane.showMessageDialog(null, linhasMatriz[i][2]);
             modelo.addRow(new Object[]{
                 linhasMatriz[i][0],
-                linhasMatriz[i][1]});
+                linhasMatriz[i][1],
+                linhasMatriz[i][2]});
 
         }
     }

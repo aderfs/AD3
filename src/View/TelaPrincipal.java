@@ -159,7 +159,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_MI_Gerenciar_VagasActionPerformed
 
     private void MI_Gerenciar_CandidaturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Gerenciar_CandidaturasActionPerformed
-       GerenciamentoCurriculo objeto = new GerenciamentoCurriculo();
+       GerenciamentoCandidatura objeto = new GerenciamentoCandidatura();
         objeto.setVisible(true);
     }//GEN-LAST:event_MI_Gerenciar_CandidaturasActionPerformed
 

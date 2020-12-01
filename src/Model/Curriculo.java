@@ -100,8 +100,8 @@ public class Curriculo {
         return null;
     }
 
-    // retorna o maior ID da nossa base de dados
-    public int maiorID() throws SQLException {
-        return DAO.maiorID();
-    }
+//    // retorna o maior ID da nossa base de dados
+//    public int maiorID() throws SQLException {
+//        return DAO.maiorID();
+//    }
 }

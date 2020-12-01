@@ -3,6 +3,7 @@ package DAO;
 import Model.Candidatura;
 import java.util.*;
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class CandidaturaDAO {
 
@@ -60,6 +61,7 @@ public class CandidaturaDAO {
             while (res.next()) {
 
                 int id = res.getInt("ID_candidatura");  //parametros
+//                JOptionPane.showMessageDialog(null, id);
                 int idc = res.getInt("Curriculo_ID_curriculo");
                 int idv = res.getInt("Vaga_ID_vaga");
 
@@ -116,14 +118,14 @@ public class CandidaturaDAO {
     //Atualizar a candidatura através de um objeto Candidatura
     public boolean AtualizarCandidatura(Candidatura objeto) {
 
-        String sql = "UPDATE tb_candidatura set ID_candidatura = ? ,Curriculo_ID_curriculo = ? ,Vaga_ID_vaga = ? WHERE ID_candidatura = ?";
+        String sql = "UPDATE tb_candidatura set Curriculo_ID_curriculo = ?, Vaga_ID_vaga = ? WHERE ID_candidatura = ?";
 
         try {
             PreparedStatement stmt = this.getConexao().prepareStatement(sql);
 
-            stmt.setInt(1, objeto.getID_candidatura());
-            stmt.setInt(2, objeto.getCurriculo_ID_curriculo());
-            stmt.setInt(3, objeto.getVaga_ID_vaga());
+            stmt.setInt(3, objeto.getID_candidatura());
+            stmt.setInt(1, objeto.getCurriculo_ID_curriculo());
+            stmt.setInt(2, objeto.getVaga_ID_vaga());
 
             stmt.execute();
             stmt.close();

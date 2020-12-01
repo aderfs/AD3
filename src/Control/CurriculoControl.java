@@ -15,7 +15,7 @@ public class CurriculoControl {
 
     public boolean CadastrarCurriculo(String Nome, String Curriculo, String CPF, String RG, int Idade) throws SQLException {
 
-        int id = curriculo.maiorID();
+        int id = 0;
         Curriculo objeto = new Curriculo(id, Nome, Curriculo, CPF, RG, Idade);
         if (curriculo.InserirCurriculo(objeto)) {
             return true;
@@ -62,7 +62,6 @@ public class CurriculoControl {
         String MatrizCurriculo[][] = new String[tamanho][6];
         for (int i = 0; i < tamanho; i++) {
             MatrizCurriculo[i][0] = listacurriculos.get(i).getID_curriculo() + "";
-//            JOptionPane.showMessageDialog(null, MatrizCurriculo[i][0]);
             MatrizCurriculo[i][1] = listacurriculos.get(i).getNome();
             MatrizCurriculo[i][2] = listacurriculos.get(i).getCurriculo();
             MatrizCurriculo[i][3] = listacurriculos.get(i).getCPF();

@@ -80,7 +80,6 @@ public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO 
             while (res.next()) {
 
                 int id = res.getInt("ID_curriculo");  //parametros
-//                JOptionPane.showMessageDialog(null, id);
                 String nome = res.getString("Nome");
                 String curriculo = res.getString("Curriculo");
                 String CPF = res.getString("CPF");
@@ -175,7 +174,7 @@ public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO 
 
         try {
             Statement stmt = this.getConexao().createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * id FROM tb_curriculo WHERE id = " + ID_curriculo);
+            ResultSet res = stmt.executeQuery("SELECT * id FROM tb_curriculo WHERE ID_curriculo = " + ID_curriculo);
             res.next();
 
             objeto.setNome(res.getString("Nome"));
