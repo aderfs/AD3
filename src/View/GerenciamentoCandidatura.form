@@ -23,23 +23,29 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="0" pref="0" max="32767" attributes="0"/>
+          <Component id="jScrollPane1" alignment="0" pref="500" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jTextField1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="jTextField2" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel3" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="C_IDV_GCandidatura1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="C_IDCandidatura_GCandidatura" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="C_IDCurriculo_GCandidatura" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="B_Cancelar_GCandidatura" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="B_Apagar_GCandidatura" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="B_Alterar_GCandidatura" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="B_Cancelar_Gerenciamento_Candidatura" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-              <Component id="B_Apagar_Gerenciamento_Candidatura" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-              <Component id="B_Alterar_Gerenciamento_Candidatura" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -47,19 +53,23 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jScrollPane1" min="-2" pref="95" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+              <Component id="C_IDCandidatura_GCandidatura" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
+              <Component id="C_IDCurriculo_GCandidatura" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Component id="C_IDV_GCandidatura1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="B_Apagar_Gerenciamento_Candidatura" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="B_Alterar_Gerenciamento_Candidatura" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="B_Cancelar_Gerenciamento_Candidatura" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="B_Apagar_GCandidatura" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="B_Alterar_GCandidatura" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="B_Cancelar_GCandidatura" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
@@ -74,16 +84,22 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="T_Gerenciamento_Candidatura">
+        <Component class="javax.swing.JTable" name="Tabela_GCandidatura">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="2" rowCount="4">
+              <Table columnCount="3" rowCount="4">
+                <Column editable="true" title="ID_Candidatura" type="java.lang.Object"/>
                 <Column editable="false" title="ID_Curriculo" type="java.lang.Object"/>
                 <Column editable="false" title="ID_Vaga" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -100,51 +116,64 @@
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Tabela_GCandidaturaMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="B_Cancelar_Gerenciamento_Candidatura">
+    <Component class="javax.swing.JButton" name="B_Cancelar_GCandidatura">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Cancelar_Gerenciamento_CandidaturaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Cancelar_GCandidaturaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="B_Apagar_Gerenciamento_Candidatura">
+    <Component class="javax.swing.JButton" name="B_Apagar_GCandidatura">
       <Properties>
         <Property name="text" type="java.lang.String" value="Apagar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Apagar_Gerenciamento_CandidaturaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Apagar_GCandidaturaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="B_Alterar_Gerenciamento_Candidatura">
+    <Component class="javax.swing.JButton" name="B_Alterar_GCandidatura">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Alterar_Gerenciamento_CandidaturaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_Alterar_GCandidaturaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ID do curriculo:"/>
+        <Property name="text" type="java.lang.String" value="ID da candidatura:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="C_IDCandidatura_GCandidatura">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="C_IDCandidatura_GCandidaturaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="text" type="java.lang.String" value="ID do curriculo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="C_IDCurriculo_GCandidatura">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="C_IDCurriculo_GCandidaturaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
         <Property name="text" type="java.lang.String" value="ID da vaga:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="C_IDV_GCandidatura1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="C_IDV_GCandidatura1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
