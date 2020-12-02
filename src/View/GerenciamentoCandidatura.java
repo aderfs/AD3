@@ -8,11 +8,11 @@ import javax.swing.table.DefaultTableModel;
 public class GerenciamentoCandidatura extends javax.swing.JFrame {
 
     private CandidaturaControl Controlador;
-    
+
     public GerenciamentoCandidatura() {
         initComponents();
-         this.Controlador = new CandidaturaControl();
-        this.carregaTabela(); 
+        this.Controlador = new CandidaturaControl();
+        this.carregaTabela();
     }
 
     @SuppressWarnings("unchecked")
@@ -24,12 +24,10 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
         B_Cancelar_GCandidatura = new javax.swing.JButton();
         B_Apagar_GCandidatura = new javax.swing.JButton();
         B_Alterar_GCandidatura = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        C_IDCandidatura_GCandidatura = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         C_IDCurriculo_GCandidatura = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        C_IDV_GCandidatura1 = new javax.swing.JTextField();
+        C_IDV_GCandidatura = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,14 +78,6 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("ID da candidatura:");
-
-        C_IDCandidatura_GCandidatura.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C_IDCandidatura_GCandidaturaActionPerformed(evt);
-            }
-        });
-
         jLabel2.setText("ID do curriculo:");
 
         C_IDCurriculo_GCandidatura.addActionListener(new java.awt.event.ActionListener() {
@@ -98,9 +88,9 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
 
         jLabel3.setText("ID da vaga:");
 
-        C_IDV_GCandidatura1.addActionListener(new java.awt.event.ActionListener() {
+        C_IDV_GCandidatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C_IDV_GCandidatura1ActionPerformed(evt);
+                C_IDV_GCandidaturaActionPerformed(evt);
             }
         });
 
@@ -112,39 +102,32 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(C_IDCurriculo_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(C_IDV_GCandidatura1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(C_IDV_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(C_IDCandidatura_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(C_IDCurriculo_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(B_Cancelar_GCandidatura))
+                        .addGap(15, 15, 15)
+                        .addComponent(B_Cancelar_GCandidatura)
                         .addGap(65, 65, 65)
                         .addComponent(B_Apagar_GCandidatura)
                         .addGap(65, 65, 65)
-                        .addComponent(B_Alterar_GCandidatura)))
+                        .addComponent(B_Alterar_GCandidatura))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addGap(10, 10, 10)
-                .addComponent(C_IDCandidatura_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel2)
-                .addGap(10, 10, 10)
-                .addComponent(C_IDCurriculo_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(C_IDCurriculo_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel3)
-                .addGap(10, 10, 10)
-                .addComponent(C_IDV_GCandidatura1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(C_IDV_GCandidatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B_Apagar_GCandidatura)
                     .addComponent(B_Alterar_GCandidatura)
@@ -164,11 +147,9 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
         try {
             // validando dados da interface gr�fica.
             int ID_candidatura = 0;
-            int ID_vaga = 0;
-            int ID_curriculo = 0;
-            
+
             if (this.Tabela_GCandidatura.getSelectedRow() == -1) {
-                throw new Mensagens("Primeiro Selecione um candidato para APAGAR");
+                throw new Mensagens("Primeiro Selecione uma candidatura para APAGAR");
             } else {
                 ID_candidatura = Integer.parseInt(this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 0).toString());
             }
@@ -179,11 +160,11 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
 
                 // envia os dados para o Controlador processar
                 if (this.Controlador.ApagarCandidatura(ID_candidatura)) {
-                    
+
                     // limpa campos da interface
-                    this.C_IDCandidatura_GCandidatura.setText("");
+                    this.C_IDV_GCandidatura.setText("");
                     this.C_IDCurriculo_GCandidatura.setText("");
-                    
+
                     JOptionPane.showMessageDialog(rootPane, "Candidatura APAGADA com Sucesso!");
                 }
             }
@@ -204,25 +185,23 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
             int ID_candidatura = 0;
             int ID_vaga = 0;
             int ID_curriculo = 0;
-            
 
             if (this.C_IDCurriculo_GCandidatura.getText().length() < 0) {
                 throw new Mensagens("ID de curriculo deve conter ao menos 1 caracteres.");
             } else {
                 ID_curriculo = Integer.parseInt(this.C_IDCurriculo_GCandidatura.getText());
             }
-            if (this.C_IDV_GCandidatura1.getText().length() < 0) {
+            if (this.C_IDV_GCandidatura.getText().length() < 0) {
                 throw new Mensagens("ID de vaga deve conter ao menos 1 caracterer.");
             } else {
-                ID_vaga = Integer.parseInt(this.C_IDV_GCandidatura1.getText());
+                ID_vaga = Integer.parseInt(this.C_IDV_GCandidatura.getText());
             }
-            
 
             // envia os dados para o Controlador processar
-            if (this.Controlador.EditarCandidatura(ID_candidatura,ID_curriculo, ID_vaga)){
+            if (this.Controlador.EditarCandidatura(ID_candidatura, ID_curriculo, ID_vaga)) {
 
                 // limpa campos da interface
-                this.C_IDCandidatura_GCandidatura.setText("");
+                this.C_IDV_GCandidatura.setText("");
                 this.C_IDCurriculo_GCandidatura.setText("");
                 JOptionPane.showMessageDialog(rootPane, "Candidatura Alterada com Sucesso!");
             }
@@ -235,39 +214,33 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
         } finally {
             carregaTabela(); // atualiza a tabela.
         }
-    
-    }//GEN-LAST:event_B_Alterar_GCandidaturaActionPerformed
 
-    private void C_IDCandidatura_GCandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_IDCandidatura_GCandidaturaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_C_IDCandidatura_GCandidaturaActionPerformed
+    }//GEN-LAST:event_B_Alterar_GCandidaturaActionPerformed
 
     private void C_IDCurriculo_GCandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_IDCurriculo_GCandidaturaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_C_IDCurriculo_GCandidaturaActionPerformed
 
     private void Tabela_GCandidaturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GCandidaturaMouseClicked
-             if (this.Tabela_GCandidatura.getSelectedRow() != -1) {
+        if (this.Tabela_GCandidatura.getSelectedRow() != -1) {
 
-            String ID_candidatura = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 1).toString();
-            String ID_vaga = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 3).toString();
-            String ID_curriculo = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 2).toString();
+            String ID_vaga = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 2).toString();
+            String ID_curriculo = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 1).toString();
 
-            this.C_IDCandidatura_GCandidatura.setText(ID_candidatura);
             this.C_IDCurriculo_GCandidatura.setText(ID_curriculo);
-            this.C_IDV_GCandidatura1.setText(ID_vaga);
+            this.C_IDV_GCandidatura.setText(ID_vaga);
         }
     }//GEN-LAST:event_Tabela_GCandidaturaMouseClicked
 
-    private void C_IDV_GCandidatura1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_IDV_GCandidatura1ActionPerformed
+    private void C_IDV_GCandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_IDV_GCandidaturaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_C_IDV_GCandidatura1ActionPerformed
+    }//GEN-LAST:event_C_IDV_GCandidaturaActionPerformed
 
     /**
      * @param args the command line arguments
      */
     @SuppressWarnings("unchecked")
-     public void carregaTabela() {
+    public void carregaTabela() {
         DefaultTableModel modelo = (DefaultTableModel) this.Tabela_GCandidatura.getModel();
         modelo.setNumRows(0);
 
@@ -283,7 +256,7 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
 
         }
     }
-     
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -320,11 +293,9 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
     private javax.swing.JButton B_Alterar_GCandidatura;
     private javax.swing.JButton B_Apagar_GCandidatura;
     private javax.swing.JButton B_Cancelar_GCandidatura;
-    private javax.swing.JTextField C_IDCandidatura_GCandidatura;
     private javax.swing.JTextField C_IDCurriculo_GCandidatura;
-    private javax.swing.JTextField C_IDV_GCandidatura1;
+    private javax.swing.JTextField C_IDV_GCandidatura;
     private javax.swing.JTable Tabela_GCandidatura;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
