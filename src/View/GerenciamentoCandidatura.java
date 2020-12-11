@@ -112,7 +112,7 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
                         .addComponent(B_Apagar_GCandidatura)
                         .addGap(65, 65, 65)
                         .addComponent(B_Alterar_GCandidatura))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -231,7 +231,7 @@ public class GerenciamentoCandidatura extends javax.swing.JFrame {
     }//GEN-LAST:event_C_IDCurriculo_GCandidaturaActionPerformed
 
     private void Tabela_GCandidaturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GCandidaturaMouseClicked
-             if (this.Tabela_GCandidatura.getSelectedRow() != -1) { //carrega os valores do selecionado nos campos
+             if (this.Tabela_GCandidatura.getSelectedRow() != -1) { //quando clicado carrega os dados do objeto selecionado
             
             String ID_vaga = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 2).toString();
             String ID_curriculo = this.Tabela_GCandidatura.getValueAt(this.Tabela_GCandidatura.getSelectedRow(), 1).toString();

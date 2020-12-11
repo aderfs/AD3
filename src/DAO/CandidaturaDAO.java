@@ -138,7 +138,7 @@ public class CandidaturaDAO {
 
     }
     
-    //Mostrar todos os dados da candidatura através do ID
+    //Mostrar todos os dados de uma candidatura através do ID
     public Candidatura dadosCandidatura(int ID_candidatura) {
 
         Candidatura objeto = new Candidatura();

@@ -61,7 +61,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(Tabela_GVaga);
 
-        jLabel1.setText("Descrição da vaga:");
+        jLabel1.setText("Descricao da vaga:");
 
         C_DV_GVaga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +69,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Pré-requisitos: ");
+        jLabel2.setText("Pre-requisitos: ");
 
         C_PR_GVaga.setAlignmentX(0.0F);
         C_PR_GVaga.setAlignmentY(0.0F);
@@ -79,7 +79,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Especificações:");
+        jLabel3.setText("Especificacoes:");
 
         jLabel4.setText("Contato:");
 
@@ -244,7 +244,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
 
     private void B_Apagar_GVagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GVagaActionPerformed
         try {
-            // validando dados da interface gr�fica.
+            // validando dados da interface grafica.
             int id = 0;
             if (this.Tabela_GVaga.getSelectedRow() == -1) {
                 throw new Mensagens("Primeiro Selecione uma vaga para APAGAR");
@@ -279,7 +279,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
     }//GEN-LAST:event_B_Apagar_GVagaActionPerformed
 
     private void Tabela_GVagaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GVagaMouseClicked
-        if (this.Tabela_GVaga.getSelectedRow() != -1) { //carrega o objeto selecionado nos campos
+        if (this.Tabela_GVaga.getSelectedRow() != -1) { //quando clicado carrega os dados do objeto selecionado
 
             String Contato = this.Tabela_GVaga.getValueAt(this.Tabela_GVaga.getSelectedRow(), 4).toString();
             String Descricaovaga = this.Tabela_GVaga.getValueAt(this.Tabela_GVaga.getSelectedRow(), 1).toString();

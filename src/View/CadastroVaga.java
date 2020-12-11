@@ -35,7 +35,7 @@ public class CadastroVaga extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Descri��o da vaga: ");
+        jLabel1.setText("Descricao da vaga: ");
 
         C_DV_CVaga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,7 +43,7 @@ public class CadastroVaga extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Pr�-requisitos: ");
+        jLabel2.setText("Pre-requisitos: ");
 
         C_PR_CVaga.setAlignmentX(0.0F);
         C_PR_CVaga.setAlignmentY(0.0F);
@@ -53,7 +53,7 @@ public class CadastroVaga extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Especifica��es:");
+        jLabel3.setText("Especificacoes:");
 
         B_Cadastrar_Vaga.setText("Cadastrar");
         B_Cadastrar_Vaga.addActionListener(new java.awt.event.ActionListener() {

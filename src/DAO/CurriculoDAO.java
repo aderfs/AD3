@@ -148,7 +148,7 @@ public class CurriculoDAO {
 
     }
 
-    //Mostrar todos os dados do curriculo através do ID
+    //Mostrar todos os dados de um curriculo através do ID
     public Curriculo dadosCurriculo(int ID_curriculo) {
 
         Curriculo objeto = new Curriculo();

@@ -76,7 +76,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o da vaga: "/>
+        <Property name="text" type="java.lang.String" value="Descricao da vaga: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="C_DV_CVaga">
@@ -86,7 +86,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pr&#xe9;-requisitos: "/>
+        <Property name="text" type="java.lang.String" value="Pre-requisitos: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="C_PR_CVaga">
@@ -100,7 +100,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Especifica&#xe7;&#xf5;es:"/>
+        <Property name="text" type="java.lang.String" value="Especificacoes:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="C_Espec_CVaga">

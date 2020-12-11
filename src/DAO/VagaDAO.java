@@ -145,7 +145,7 @@ public class VagaDAO {
 
     }
 
-    //Mostrar todos os dados do curriculo através do ID
+    //Mostrar todos os dados de um curriculo através do ID
     public Vaga DadosVagas(int ID_vaga) {
 
         Vaga objeto = new Vaga();

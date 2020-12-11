@@ -303,7 +303,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     }//GEN-LAST:event_B_Apagar_GCurriculoActionPerformed
 
     private void Tabela_GCurriculoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GCurriculoMouseClicked
-        if (this.Tabela_GCurriculo.getSelectedRow() != -1) { //carrega os dados do selecionado nos campos
+        if (this.Tabela_GCurriculo.getSelectedRow() != -1) { //quando clicado carrega os dados do objeto selecionado
 
             String Nome = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 1).toString();
             String Idade = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 5).toString();
