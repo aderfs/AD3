@@ -13,7 +13,7 @@ public class CadastroCandidatura extends javax.swing.JFrame {
 
     public CadastroCandidatura() {
         initComponents();
-         this.Controlador = new CandidaturaControl();
+         this.Controlador = new CandidaturaControl(); //instancia a classe CandidaturaControl
     }
 
     @SuppressWarnings("unchecked")
@@ -111,12 +111,12 @@ public class CadastroCandidatura extends javax.swing.JFrame {
     }//GEN-LAST:event_C_IDvaga_CCurriculoActionPerformed
 
     private void B_Cancelar_Cadastro_CandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_Cadastro_CandidaturaActionPerformed
-        this.setVisible(false);
+        this.setVisible(false); //sai da interface CadastroCandidatura
     }//GEN-LAST:event_B_Cancelar_Cadastro_CandidaturaActionPerformed
 
     private void B_Cadastrar_Cadastro_CandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cadastrar_Cadastro_CandidaturaActionPerformed
         try {
-            // recebendo e validando dados da interface gr�fica.
+            // recebendo e validando dados da interface grafica.
             int ID_vaga = 0;
             int ID_curriculo = 0;
 
@@ -144,7 +144,7 @@ public class CadastroCandidatura extends javax.swing.JFrame {
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um n�mero.");
+            JOptionPane.showMessageDialog(null, "Informe um numero.");
         } catch (SQLException ex) {
             Logger.getLogger(CadastroCurriculo.class.getName()).log(Level.SEVERE, null, ex);
         }

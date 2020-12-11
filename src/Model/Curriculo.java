@@ -12,10 +12,10 @@ public class Curriculo {
     private String CPF;
     private String RG;
     private int Idade;
-    private final CurriculoDAO DAO;
+    private final CurriculoDAO DAO; //facilita mudancas de nome na classe DAO
 
     public Curriculo() {
-        this.DAO = new CurriculoDAO();
+        this.DAO = new CurriculoDAO(); //instancia a classe CurriculoDAO
     }
 
     public Curriculo(int ID_curriculo, String Nome, String Curriculo, String CPF, String RG, int Idade) {
@@ -25,7 +25,7 @@ public class Curriculo {
         this.CPF = CPF;
         this.RG = RG;
         this.Idade = Idade;
-        this.DAO = new CurriculoDAO();
+        this.DAO = new CurriculoDAO(); //instancia a classe CurriculoDAO
     }
 
     public int getID_curriculo() {
@@ -76,32 +76,33 @@ public class Curriculo {
         this.Idade = Idade;
     }
 
+    //Read
     public ArrayList getListacurriculos() {
         return DAO.getListacurriculos();
     }
 
+    //Create
     public boolean InserirCurriculo(Curriculo objeto) {
         DAO.InserirCurriculo(objeto);
         return true;
     }
 
+    //Delete
     public boolean DeletarCurriculo(int ID_curriculo) {
         DAO.DeletarCurriculo(ID_curriculo);
         return true;
     }
 
+    //Update
     public boolean AtualizarCurriculo(Curriculo objeto) {
         DAO.AtualizarCurriculo(objeto);
         return true;
     }
 
+    //Read
     public Curriculo dadosCurriculo(int ID_curriculo) {
         DAO.dadosCurriculo(ID_curriculo);
         return null;
     }
 
-//    // retorna o maior ID da nossa base de dados
-//    public int maiorID() throws SQLException {
-//        return DAO.maiorID();
-//    }
 }

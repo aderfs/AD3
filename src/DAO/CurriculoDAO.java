@@ -5,31 +5,13 @@ import java.util.*;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO MAIOR ID COM AUTOINCREMENT?
-                            //PQ TODOS OS IDS NO GERENCIAR CURRICULO SAO IGUAIS? ESSE É O PROBLEMA P APAGAR? VEREMOS NO PROXIMO EP DE AULA DE PROGRAMAÇÃO
-
+public class CurriculoDAO { 
+    
     public static ArrayList<Curriculo> ListaCurriculo = new ArrayList<Curriculo>();
 
     //Construtor Vazio
     public CurriculoDAO() {
     }
-
-//    public int maiorID() throws SQLException {
-//
-//        int maiorID = 0;
-//        try {
-//            Statement stmt = this.getConexao().createStatement();
-//            ResultSet res = stmt.executeQuery("SELECT MAX(id) id FROM tb_curriculo");
-//            res.next();
-//            maiorID = res.getInt("id");
-//
-//            stmt.close();
-//
-//        } catch (SQLException ex) {
-//        }
-//
-//        return maiorID;
-//    }
 
     //Conectar no BD
     public Connection getConexao() {
@@ -45,7 +27,7 @@ public class CurriculoDAO { //PQ SEM AUTO INCREMENT N FUNCIONA? E PQ PRECISA DO 
             String database = "db_curriculo";
             String url = "jdbc:mysql://" + server + ":3306/" + database + "?useTimezone=true&serverTimezone=UTC";
             String user = "root";
-            String password = "rootpass";
+            String password = "0ASDasd0";
 
             connection = DriverManager.getConnection(url, user, password);
 

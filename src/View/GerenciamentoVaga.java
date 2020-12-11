@@ -11,8 +11,8 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
 
     public GerenciamentoVaga() {
         initComponents();
-        this.Controlador = new VagaControl();
-        this.carregaTabela();
+        this.Controlador = new VagaControl(); //instancia a classe Vaga control
+        this.carregaTabela(); //carrega a tabela do BD
     }
 
     @SuppressWarnings("unchecked")
@@ -183,7 +183,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
 
     private void B_Alterar_GVagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_GVagaActionPerformed
         try {
-            // recebendo e validando dados da interface gr�fica.
+            // recebendo e validando dados da interface grafica.
             int id = 0;
             String Descrivaovaga = "";
             String Prerequisito = "";
@@ -196,17 +196,17 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
                 Contato = this.C_Contato_GVaga.getText();
             }
             if (this.C_DV_GVaga.getText().length() < 2) {
-                throw new Mensagens("A descri��o da vaga deve conter ao menos 2 caracteres.");
+                throw new Mensagens("A descricao da vaga deve conter ao menos 2 caracteres.");
             } else {
                 Descrivaovaga = this.C_DV_GVaga.getText();
             }
             if (this.C_PR_GVaga.getText().length() < 2) {
-                throw new Mensagens("O pr�-requisito deve conter ao menos 2 caracteres.");
+                throw new Mensagens("O pre-requisito deve conter ao menos 2 caracteres.");
             } else {
                 Prerequisito = this.C_PR_GVaga.getText();
             }
             if (this.C_Espec_GVaga.getText().length() < 2) {
-                throw new Mensagens("A especifica��o deve conter ao menos 2 caracteres.");
+                throw new Mensagens("A especificacao deve conter ao menos 2 caracteres.");
             } else {
                 Especificacoes = this.C_Espec_GVaga.getText();
             }
@@ -239,7 +239,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
     }//GEN-LAST:event_B_Alterar_GVagaActionPerformed
 
     private void B_Cancelar_GVagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_GVagaActionPerformed
-        this.setVisible(false);
+        this.setVisible(false); //sai da interface GerenciamentoVaga
     }//GEN-LAST:event_B_Cancelar_GVagaActionPerformed
 
     private void B_Apagar_GVagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GVagaActionPerformed
@@ -279,7 +279,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
     }//GEN-LAST:event_B_Apagar_GVagaActionPerformed
 
     private void Tabela_GVagaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GVagaMouseClicked
-        if (this.Tabela_GVaga.getSelectedRow() != -1) {
+        if (this.Tabela_GVaga.getSelectedRow() != -1) { //carrega o objeto selecionado nos campos
 
             String Contato = this.Tabela_GVaga.getValueAt(this.Tabela_GVaga.getSelectedRow(), 4).toString();
             String Descricaovaga = this.Tabela_GVaga.getValueAt(this.Tabela_GVaga.getSelectedRow(), 1).toString();
@@ -297,7 +297,7 @@ public class GerenciamentoVaga extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     @SuppressWarnings("unchecked")
-    public void carregaTabela() {
+    public void carregaTabela() { //coloca a lista vindo do BD na tabela
         DefaultTableModel modelo = (DefaultTableModel) this.Tabela_GVaga.getModel();
         modelo.setNumRows(0);
 

@@ -8,11 +8,11 @@ import javax.swing.JOptionPane;
 
 public class CadastroCurriculo extends javax.swing.JFrame {
 
-    private CurriculoControl Controlador;
+    private CurriculoControl Controlador; 
 
     public CadastroCurriculo() {
         initComponents();
-        this.Controlador = new CurriculoControl();
+        this.Controlador = new CurriculoControl(); //instancia a classe CurriculoControl
     }
 
     /**
@@ -148,7 +148,7 @@ public class CadastroCurriculo extends javax.swing.JFrame {
     }//GEN-LAST:event_C_Idade_CurriculoActionPerformed
 
     private void B_Cancelar_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_CurriculoActionPerformed
-        this.setVisible(false);
+        this.setVisible(false); //sai da tela CadastroCurriculo
     }//GEN-LAST:event_B_Cancelar_CurriculoActionPerformed
 
     private void C_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_CurriculoActionPerformed
@@ -157,7 +157,7 @@ public class CadastroCurriculo extends javax.swing.JFrame {
 
     private void B_Cadastrar_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cadastrar_CurriculoActionPerformed
         try {
-            // recebendo e validando dados da interface gr�fica.
+            // recebendo e validando dados da interface grafica.
             String Nome = "";
             int Idade = 0;
             String CPF = "";
@@ -205,7 +205,7 @@ public class CadastroCurriculo extends javax.swing.JFrame {
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um n�mero.");
+            JOptionPane.showMessageDialog(null, "Informe um numero.");
         } catch (SQLException ex) {
             Logger.getLogger(CadastroCurriculo.class.getName()).log(Level.SEVERE, null, ex);
         }

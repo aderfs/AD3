@@ -14,7 +14,7 @@ public class CadastroVaga extends javax.swing.JFrame {
   
     public CadastroVaga() {
         initComponents();
-        this.Controlador = new VagaControl();
+        this.Controlador = new VagaControl(); //instancia a classe VagaControl
     }
 
     
@@ -35,7 +35,7 @@ public class CadastroVaga extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Descrição da vaga: ");
+        jLabel1.setText("Descriï¿½ï¿½o da vaga: ");
 
         C_DV_CVaga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,7 +43,7 @@ public class CadastroVaga extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Pré-requisitos: ");
+        jLabel2.setText("Prï¿½-requisitos: ");
 
         C_PR_CVaga.setAlignmentX(0.0F);
         C_PR_CVaga.setAlignmentY(0.0F);
@@ -53,7 +53,7 @@ public class CadastroVaga extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Especificações:");
+        jLabel3.setText("Especificaï¿½ï¿½es:");
 
         B_Cadastrar_Vaga.setText("Cadastrar");
         B_Cadastrar_Vaga.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +146,7 @@ public class CadastroVaga extends javax.swing.JFrame {
 
     private void B_Cadastrar_VagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cadastrar_VagaActionPerformed
          try {
-            // recebendo e validando dados da interface grï¿½fica.
+            // recebendo e validando dados da interface grafica.
             String Descricaovaga = "";
             String Prerequisito = "";
             String Especificacoes = "";
@@ -158,17 +158,17 @@ public class CadastroVaga extends javax.swing.JFrame {
                 Contato = this.C_Contato_CVaga.getText();
             }
             if (this.C_DV_CVaga.getText().length() < 2) {
-                throw new Mensagens("A descrição da vaga deve conter ao menos 2 caractereres.");
+                throw new Mensagens("A descricao da vaga deve conter ao menos 2 caractereres.");
             } else {
                 Descricaovaga = this.C_DV_CVaga.getText();
             }
             if (this.C_PR_CVaga.getText().length() < 2) {
-                throw new Mensagens("O pré-requisito deve conter ao menos 2 caracteres.");
+                throw new Mensagens("O pre-requisito deve conter ao menos 2 caracteres.");
             } else {
                 Prerequisito = this.C_PR_CVaga.getText();
             }
             if (this.C_Espec_CVaga.getText().length() < 2) {
-                throw new Mensagens("As especificações devem conter ao menos 2 caracteres.");
+                throw new Mensagens("As especificacoes devem conter ao menos 2 caracteres.");
             } else {
                 Especificacoes = this.C_Espec_CVaga.getText();
             }
@@ -188,7 +188,7 @@ public class CadastroVaga extends javax.swing.JFrame {
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um nï¿½mero.");
+            JOptionPane.showMessageDialog(null, "Informe um numero.");
         } catch (SQLException ex) {
             Logger.getLogger(CadastroCurriculo.class.getName()).log(Level.SEVERE, null, ex);
         }

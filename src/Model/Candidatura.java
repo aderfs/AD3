@@ -9,17 +9,17 @@ public class Candidatura {
     private int ID_candidatura;
     private int Curriculo_ID_curriculo;
     private int Vaga_ID_vaga;
-    private final CandidaturaDAO DAO;
+    private final CandidaturaDAO DAO; //facilita mundanca de nome na classe DAO
 
     public Candidatura() {
-        this.DAO = new CandidaturaDAO();
+        this.DAO = new CandidaturaDAO(); //instancia a classe CandidaturaDAO
     }
 
     public Candidatura(int ID_candidatura, int Curriculo_ID_curriculo, int Vaga_ID_vaga) {
         this.ID_candidatura = ID_candidatura;
         this.Curriculo_ID_curriculo = Curriculo_ID_curriculo;
         this.Vaga_ID_vaga = Vaga_ID_vaga;
-        this.DAO = new CandidaturaDAO();
+        this.DAO = new CandidaturaDAO(); //instancia a classe CandidaturaDAO
     }
 
     public int getID_candidatura() {
@@ -46,25 +46,30 @@ public class Candidatura {
         this.Vaga_ID_vaga = Vaga_ID_vaga;
     }
     
+    //Read
      public ArrayList getListacandidaturas() {
         return DAO.getListacandidaturas();
     }
 
+    //Create
     public boolean InserirCandidatura(Candidatura objeto) {
         DAO.InserirCandidatura(objeto);
         return true;
     }
 
+    //Delete
     public boolean DeletarCandidatura(int ID_candidatura) {
         DAO.DeletarCandidatura(ID_candidatura);
         return true;
     }
 
+    //Update
     public boolean AtualizarCandidatura(int id,Candidatura objeto) {
         DAO.AtualizarCandidatura(objeto);
         return true;
     }
 
+    //Read
     public Curriculo dadosCandidatura(int ID_candidatura) {
         DAO.dadosCandidatura(ID_candidatura);
         return null;

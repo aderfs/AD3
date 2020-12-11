@@ -26,7 +26,7 @@ public class CandidaturaDAO {
             String database = "db_candidatura";
             String url = "jdbc:mysql://" + server + ":3306/" + database + "?useTimezone=true&serverTimezone=UTC";
             String user = "root";
-            String password = "rootpass";
+            String password = "0ASDasd0";
 
             connection = DriverManager.getConnection(url, user, password);
 

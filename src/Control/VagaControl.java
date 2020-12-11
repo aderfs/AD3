@@ -11,8 +11,7 @@ public class VagaControl {
     //atributo para facilitar mudancas no nome do model
 
     public VagaControl() {
-        this.vaga = new Vaga();
-        //contrutor que facilita mudancas na camada model sem afetar tanto o control
+        this.vaga = new Vaga(); //instancia a classe model Vaga
     }
 
     //create
@@ -53,15 +52,14 @@ public class VagaControl {
     }
 
     @SuppressWarnings("unchecked")
-    public String[][] getMatrizVaga() {
+    public String[][] getMatrizVaga() { //carrega uma matriz com todas as vagas organizadas
 
         ArrayList<Vaga> listavaga = vaga.getListavagas();
         int tamanho = listavaga.size();
 
         String MatrizVaga[][] = new String[tamanho][5];
-        for (int i = 0; i < tamanho; i++) {
+        for (int i = 0; i < tamanho; i++) { //traduz a matriz para uma lista valida na view
             MatrizVaga[i][0] = listavaga.get(i).getID_vaga() + "";
-//            JOptionPane.showMessageDialog(null, MatrizVaga[i][0]);
             MatrizVaga[i][1] = listavaga.get(i).getDescricaovaga();
             MatrizVaga[i][2] = listavaga.get(i).getPrerequisito();
             MatrizVaga[i][3] = listavaga.get(i).getEspecificacoes();

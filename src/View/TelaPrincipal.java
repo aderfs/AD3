@@ -125,18 +125,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MI_Gerenciar_CurriculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Gerenciar_CurriculosActionPerformed
-        GerenciamentoCurriculo objeto = new GerenciamentoCurriculo();
-        objeto.setVisible(true);
+        GerenciamentoCurriculo objeto = new GerenciamentoCurriculo(); //instancia a classe View Gerenciamentocurriculo
+        objeto.setVisible(true); //entra na respectiva interface
     }//GEN-LAST:event_MI_Gerenciar_CurriculosActionPerformed
 
     private void MI_Criar_CandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Criar_CandidaturaActionPerformed
-        CadastroCandidatura objeto = new CadastroCandidatura();
-        objeto.setVisible(true);
+        CadastroCandidatura objeto = new CadastroCandidatura(); //instancia a classe View CadastroCandidatura
+        objeto.setVisible(true); //entra na respectiva interface
     }//GEN-LAST:event_MI_Criar_CandidaturaActionPerformed
 
     private void MI_Cadastrar_CurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Cadastrar_CurriculoActionPerformed
-        CadastroCurriculo objeto = new CadastroCurriculo();
-        objeto.setVisible(true);
+        CadastroCurriculo objeto = new CadastroCurriculo(); //instancia a classe View CadastroCurriculo
+        objeto.setVisible(true); //entra na respectiva interface
 
     }//GEN-LAST:event_MI_Cadastrar_CurriculoActionPerformed
 
@@ -145,22 +145,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_ArquivoActionPerformed
 
     private void MI_SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_SairActionPerformed
-        System.exit(0);
+        System.exit(0); //sai do programa
     }//GEN-LAST:event_MI_SairActionPerformed
 
     private void MI_CrIar_VagaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_CrIar_VagaActionPerformed
-        CadastroVaga objeto = new CadastroVaga();
-        objeto.setVisible(true);
+        CadastroVaga objeto = new CadastroVaga(); //instancia a classe View CadastroVaga
+        objeto.setVisible(true); //entra na respectiva interface
     }//GEN-LAST:event_MI_CrIar_VagaActionPerformed
 
     private void MI_Gerenciar_VagasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Gerenciar_VagasActionPerformed
-        GerenciamentoVaga objeto = new GerenciamentoVaga();
-        objeto.setVisible(true);
+        GerenciamentoVaga objeto = new GerenciamentoVaga(); //instancia a classe View GerenciamentoVaga
+        objeto.setVisible(true); //entra na respectiva interface
     }//GEN-LAST:event_MI_Gerenciar_VagasActionPerformed
 
     private void MI_Gerenciar_CandidaturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_Gerenciar_CandidaturasActionPerformed
-       GerenciamentoCandidatura objeto = new GerenciamentoCandidatura();
-        objeto.setVisible(true);
+       GerenciamentoCandidatura objeto = new GerenciamentoCandidatura(); //instancia a classe View Gerenciamento Candidatura
+        objeto.setVisible(true); //entra na respectiva interface
     }//GEN-LAST:event_MI_Gerenciar_CandidaturasActionPerformed
 
     /**

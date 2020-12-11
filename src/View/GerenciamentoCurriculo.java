@@ -11,8 +11,8 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
 
     public GerenciamentoCurriculo() {
         initComponents();
-        this.Controlador = new CurriculoControl();
-        this.carregaTabela();
+        this.Controlador = new CurriculoControl(); //instancia a classe CuriculoControl
+        this.carregaTabela(); //carrega a tabela de curriculos vindo do BD
     }
 
     @SuppressWarnings("unchecked")
@@ -199,7 +199,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
 
     private void B_Alterar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Alterar_GCurriculoActionPerformed
         try {
-            // recebendo e validando dados da interface gr�fica.
+            // recebendo e validando dados da interface grafica.
             int id = 0;
             String Nome = "";
             int Idade = 0;
@@ -255,19 +255,19 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
         } catch (Mensagens erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         } catch (NumberFormatException erro2) {
-            JOptionPane.showMessageDialog(null, "Informe um número.");
+            JOptionPane.showMessageDialog(null, "Informe um numero.");
         } finally {
             carregaTabela(); // atualiza a tabela.
         }
     }//GEN-LAST:event_B_Alterar_GCurriculoActionPerformed
 
     private void B_Cancelar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Cancelar_GCurriculoActionPerformed
-        this.setVisible(false);
+        this.setVisible(false); //sai da interface GerenciamentoCurriculo
     }//GEN-LAST:event_B_Cancelar_GCurriculoActionPerformed
 
     private void B_Apagar_GCurriculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_Apagar_GCurriculoActionPerformed
         try {
-            // validando dados da interface gr�fica.
+            // validando dados da interface grafica.
             int id = 0;
             if (this.Tabela_GCurriculo.getSelectedRow() == -1) {
                 throw new Mensagens("Primeiro Selecione um candidato para APAGAR");
@@ -303,7 +303,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
     }//GEN-LAST:event_B_Apagar_GCurriculoActionPerformed
 
     private void Tabela_GCurriculoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tabela_GCurriculoMouseClicked
-        if (this.Tabela_GCurriculo.getSelectedRow() != -1) {
+        if (this.Tabela_GCurriculo.getSelectedRow() != -1) { //carrega os dados do selecionado nos campos
 
             String Nome = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 1).toString();
             String Idade = this.Tabela_GCurriculo.getValueAt(this.Tabela_GCurriculo.getSelectedRow(), 5).toString();
@@ -323,7 +323,7 @@ public class GerenciamentoCurriculo extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     @SuppressWarnings("unchecked")
-    public void carregaTabela() {
+    public void carregaTabela() { //carrega a lista do BD na tabela
         DefaultTableModel modelo = (DefaultTableModel) this.Tabela_GCurriculo.getModel();
         modelo.setNumRows(0);
 

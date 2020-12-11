@@ -8,9 +8,10 @@ import javax.swing.JOptionPane;
 public class CandidaturaControl {
 
     private final Candidatura candidatura;
+    //atributo para facilitar mudancas no nome do model
 
     public CandidaturaControl() {
-        this.candidatura = new Candidatura();
+        this.candidatura = new Candidatura(); //instancia a classe model Candidatura
     }
 
     //Create
@@ -43,33 +44,24 @@ public class CandidaturaControl {
             return false;
         }
     }
-
-    //Load
-    public Candidatura LoadCandidatura(int id) {
-        candidatura.dadosCandidatura(id);
-        return null;
-    }
-
+  
     //Read
-    public ArrayList getListacandidaturas() {
+    public ArrayList getListacandidaturas() { //carrega a lista de candidaturas
         return candidatura.getListacandidaturas();
     }
 
     @SuppressWarnings("unchecked")
-    public String[][] getMatrizCandidatura() {
+    public String[][] getMatrizCandidatura() { //carrega uma matriz com todos os dados organizados
 
         ArrayList<Candidatura> listacandidaturas = candidatura.getListacandidaturas();
         int tamanho = listacandidaturas.size();
 
         String MatrizCandidatura[][] = new String[tamanho][3];
-        for (int i = 0; i < tamanho; i++) {
+        for (int i = 0; i < tamanho; i++) { //traduz a matriz para uma lista valida na VIEW
 
             MatrizCandidatura[i][0] = listacandidaturas.get(i).getID_candidatura() + "";
-//            JOptionPane.showMessageDialog(null, MatrizCandidatura[i][0]);
             MatrizCandidatura[i][1] = listacandidaturas.get(i).getCurriculo_ID_curriculo() + "";
-//            JOptionPane.showMessageDialog(null, MatrizCandidatura[i][1]);
             MatrizCandidatura[i][2] = listacandidaturas.get(i).getVaga_ID_vaga() + "";
-//            JOptionPane.showMessageDialog(null, MatrizCandidatura[i][2]);
 
         }
 

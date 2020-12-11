@@ -11,10 +11,10 @@ public class Vaga {
     private String Prerequisito;
     private String Especificacoes;
     private String Contato;
-    private final VagaDAO DAO;
+    private final VagaDAO DAO; //facilita a mudança de nome de classe no DAO
 
     public Vaga() {
-        this.DAO = new VagaDAO();
+        this.DAO = new VagaDAO(); //instancia a classe VagaDAO
     }
 
     public Vaga(int ID_vaga, String Descricaovaga, String Prerequisito, String Especificacoes, String Contato) {
@@ -23,7 +23,7 @@ public class Vaga {
         this.Prerequisito = Prerequisito;
         this.Especificacoes = Especificacoes;
         this.Contato = Contato;
-        this.DAO = new VagaDAO();
+        this.DAO = new VagaDAO(); //instancia a classe VagaDAO
     }
 
     public int getID_vaga() {
@@ -66,25 +66,30 @@ public class Vaga {
         this.Contato = Contato;
     }
 
+    //READ
      public ArrayList getListavagas() {
         return DAO.getListavagas();
     }
 
+    //Create
     public boolean InserirVagas(Vaga objeto) {
         DAO.InserirVagas(objeto);
         return true;
     }
 
+    //Delete
     public boolean DeletarVagas(int ID_vaga) {
         DAO.DeletarVagas(ID_vaga);
         return true;
     }
 
+    //Update
     public boolean AtualizarVagas(int id,Vaga objeto) {
         DAO.AtualizarVagas(objeto);
         return true;
     }
 
+    //Read
     public Curriculo DadosVagas(int ID_vaga) {
         DAO.DadosVagas(ID_vaga);
         return null;
